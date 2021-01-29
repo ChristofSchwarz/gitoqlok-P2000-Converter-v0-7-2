@@ -1,4 +1,4 @@
-///$tab 4: STLST 3 (EPT Level3)
+///$tab 14 | STLST 3 (EPT Level3)
 // P2000 EPT_LV3 (EPT = Elementarprodukttyp)
 CALL StartClock(4,'Query','STLST (Stückliste EPT_LV3, TF2HC0 and TF2TC2)','STLST');
 /*

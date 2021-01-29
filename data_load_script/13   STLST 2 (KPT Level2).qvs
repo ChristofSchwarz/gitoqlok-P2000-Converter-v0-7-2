@@ -1,4 +1,4 @@
-///$tab 3: STLST 2 (KPT Level2)
+///$tab 13 | STLST 2 (KPT Level2)
 // P2000 KPT_LV2 (PKT=Kombinatsprodukt)
 CALL StartClock(3,'Query','STLST (Stückliste KPT_LV2, TF2HC0 and TF2TC2)','STLST');
 

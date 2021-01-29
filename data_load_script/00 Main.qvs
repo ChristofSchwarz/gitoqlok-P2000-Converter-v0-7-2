@@ -1,4 +1,4 @@
-///$tab Main
+///$tab 00 Main
 SET ThousandSep=',';
 SET DecimalSep='.';
 SET MoneyThousandSep=',';

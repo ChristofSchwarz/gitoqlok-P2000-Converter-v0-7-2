@@ -1,4 +1,4 @@
-///$tab 1: Policy History
+///$tab 11 | Policy History
 // Vertrags History
 // Weil wir auf TF4TEC Tabelle kein Gültig bis Datum haben müssen wir ebenfalls die TF2HD0 Tabelle lesen
 CALL StartClock(1,'Query','PolHist (Policy History, join of TF4TEC and TF2HD0)', 'PolHist');

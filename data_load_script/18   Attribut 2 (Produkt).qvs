@@ -1,4 +1,4 @@
-///$tab 8: Attribut 2 (Produkt)
+///$tab 18 | Attribut 2 (Produkt)
 // P2000 Attribute aus Produkt    
 CALL StartClock(8,'Query','Attribute aus Produkt, TF2TG0 and TF2TG1','Attribute');
 

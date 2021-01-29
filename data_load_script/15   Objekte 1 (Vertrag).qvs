@@ -1,4 +1,4 @@
-///$tab 5: Objekte 1 (Vertrag)
+///$tab 15 | Objekte 1 (Vertrag)
 // P2000 Objekte aus Vertrag
 CALL StartClock(5,'Query','Objekte aus Vertrag, TF2TG0 and TF2HG0','Objekte');
 

@@ -1,4 +1,4 @@
-///$tab 2: STLST 1 (Vertrag)
+///$tab 12 | STLST 1 (Vertrag)
 // P2000 Vertrag
 CALL StartClock(2,'Query','STLST (Stückliste Vertrag, TF4TEC and TF2HD0)','STLST');
 

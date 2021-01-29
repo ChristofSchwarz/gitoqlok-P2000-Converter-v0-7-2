@@ -1,4 +1,4 @@
-///$tab ┌ Start Polices Loop
+///$tab 10┌ Start Polices Loop
 PolicesGrp:
 LOAD
 	$pol_group,

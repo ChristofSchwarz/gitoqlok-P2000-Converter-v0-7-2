@@ -1,4 +1,4 @@
-///$tab 6: Objekte 2 (Produkt)
+///$tab 16 | Objekte 2 (Produkt)
 // P2000 Objekte aus Produkt
 CALL StartClock(6,'Query','Objekte aus Produkt, TF2TG0 and TF2HG0','Objekte');
 

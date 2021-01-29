@@ -1,4 +1,4 @@
-///$tab 7: Attribut 1 (Vertrag)
+///$tab 17 | Attribut 1 (Vertrag)
 // Attribute aus Vertrag
 CALL StartClock(7,'Query','Attribute aus Vertrag, TF2TG0 and TF2TG1','Attribute');
 
