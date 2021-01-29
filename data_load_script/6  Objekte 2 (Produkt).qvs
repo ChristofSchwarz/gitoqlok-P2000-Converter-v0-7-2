@@ -1,0 +1,45 @@
+///$tab 6: Objekte 2 (Produkt)
+// P2000 Objekte aus Produkt
+CALL StartClock(6,'Query','Objekte aus Produkt, TF2TG0 and TF2HG0','Objekte');
+
+CONCATENATE (Objekte)
+LOAD *
+   ,6 AS $Query_Obj
+   ,$(%STLST_Objekte in Objekte)   
+   ,$(%Objekte_Attribute in Objekte);  
+SELECT
+    TF2TG0.ID_NR          AS Obj_ID_NR
+   ,TF2TG0.KL_C           AS Obj_KL_C
+   ,TF2TG0.ABH_ROL_C      AS Obj_ABH_ROL_C
+   ,TF2TG0.DMY            AS Obj_DMY
+   ,TF2TG0.FKT_C          AS Obj_FKT_C
+   ,TF2TG0.FKT_NR         AS Obj_FKT_NR
+   ,TF2TG0.T20T20_ID_NR   AS Obj_T20T20_ID_NR
+   ,TF2TG0.TC0TD0_POL_NR  AS Obj_Vertrag_NR
+   ,TF2TG0.TC0TD0_ZUST_C  AS Obj_Vertrag_ZUST_C
+   ,TF2TG0.TC0TD0_LF_NR   AS Obj_Vertrag_LF_NR
+   ,TF2TG0.TC0T18_ID_NR   AS Obj_T18_ID_NR
+   ,TF2TG0.TC0TC0_LF_NR   AS Obj_TC0TC0_LF_NR
+   ,TF2TG0.TZ0TZ0_ID_NR   AS Obj_TZ0TZ0_ID_NR
+   ,TF2TG0.LF_NR          AS Obj_LF_NR
+   ,TF2TG0.TZ0_ID_NR      AS Obj_TZ0_ID_NR
+   ,TF2HG0.GLT_AB         AS Obj_GLT_AB
+   ,TF2HG0.GLT_BIS        AS Obj_GLT_BIS
+   ,TF2HG0.ERF_AM         AS Obj_ERF_AM  
+   ,TF2HG0.ERS_AM         AS Obj_ERS_AM
+   ,TF2HG0.LOE_C          AS Obj_LOE_C
+   ,TF2HG0.TG0TG0_ID_NR   AS Obj_TG0TG0_ID_NR
+FROM
+    /* TF2TG0 ca 122 M records : Objekt Tabelle */
+    $(vDBSchema).TF2TG0 AS TF2TG0
+INNER JOIN
+    /* TF2HG0 ca 448 M records : Objekt History Tabelle */
+    $(vDBSchema).TF2HG0 AS TF2HG0
+ON 
+    TF2TG0.ID_NR = TF2HG0.TG0TG0_ID_NR
+WHERE 
+    TF2TG0.TC0TD0_POL_NR IN ($(vPOL_NRs)) 
+;
+CALL StopClock;
+STORE Objekte INTO [$(vTempFolder)/~Objekte.qvd] (qvd);
+// DROP TABLE Objekte;

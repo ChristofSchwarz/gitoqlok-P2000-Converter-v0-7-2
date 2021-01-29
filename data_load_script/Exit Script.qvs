@@ -1,0 +1,7 @@
+///$tab Exit Script
+LET vColsCheck1 = Null();
+LET vRowsCheck1 = Null();
+LET vColsCheck2 = Null();
+LET vRowsCheck2 = Null();
+
+EXIT SCRIPT;

@@ -1,0 +1,822 @@
+[
+  {
+    "qInfo": {
+      "qId": "01fe1776-c966-4a79-827c-8c590765cd76",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vLoop",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "353",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "0c1232da-af33-4055-a2e4-70aa808399e1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vImportFolder",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://19.P2000/5.Import"
+  },
+  {
+    "qInfo": {
+      "qId": "0f08eedf-1d70-4e9f-bd14-a65ea24b4b9e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "%PolHist_STLST in PolHist",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(PolHist_TD0TD0_POL_NR, PolHist_TD0TD0_ZUST_C, PolHist_TD0TD0_LF_NR, PolHist_STAT_C) AS [%PolHist_STLST]",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "14bf53af-a637-46f0-b566-b861dd41285b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vRowsCheck1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "1bb42898-8f63-46bc-ae98-748a15fd7b76",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "0",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "0"
+  },
+  {
+    "qInfo": {
+      "qId": "1c63c47d-913f-4eec-9463-76317d868446",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "3bLv3MRKL",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "SELECT \r\n        \"3aLv3STLST\".GLT_AB                    AS \"GLT_AB\",\r\n        \"3aLv3STLST\".GLT_BIS                   AS \"GLT_BIS\",\r\n        \"3aLv3STLST\".ERF_AM                    AS \"ERF_AM\",\r\n        TF2TG0.ID_NR                           AS \"ID_NR\",\r\n        \"3aLv3STLST\".TC0TD0_POL_NR             AS \"TC0TD0_POL_NR\",\r\n        \"3aLv3STLST\".TC0TD0_ZUST_C             AS \"TC0TD0_ZUST_C\",\r\n        \"3aLv3STLST\".TC0TD0_LF_NR              AS \"TC0TD0_LF_NR\",\r\n        TF2TG0.TC0T18_ID_NR                    AS \"TF2TG0.TC0T18_ID_NR\",\r\n        TF2TG0.TC0TC0_LF_NR                    AS \"TF2TG0.TC0TC0_LF_NR\",\r\n        TF2TG0.T20T20_ID_NR                    AS \"T20T20_ID_NR\",\r\n        TF2TG0.ABH_ROL_C                       AS \"ABH_ROL_C\",\r\n        TF2TG0.FKT_C                           AS \"FKT_C\",\r\n        TF2TG0.FKT_NR                          AS \"FKT_NR\",\r\n        TF2TG0.LF_NR                           AS \"LF_NR\",\r\n        TF2TG1.T19T19_ID_NR                    AS \"T19T19_ID_NR\",\r\n        TF2TG1.UNIV_WERT                       AS \"UNIV_WERT\",\r\n        \"3aLv3STLST\".\"2aLV2STLST.TC0T18_ID_NR\" AS \"2aLV2STLST.TC0T18_ID_NR\",\r\n        \"3aLv3STLST\".\"2aLV2STLST.TC0TC0_LF_NR\" AS \"2aLV2STLST.TC0TC0_LF_NR\"\r\n    FROM \r\n       ( SELECT\r\n        \"2aLV2STLST\".\"TF2HD0.GLT_AB\"  AS \"GLT_AB\",\r\n        \"2aLV2STLST\".\"TF2HD0.GLT_BIS\" AS \"GLT_BIS\",\r\n        \"2aLV2STLST\".\"TF2HD0.ERF_AM\"  AS \"ERF_AM\",\r\n        TF2HC0.TC0TD0_POL_NR          AS \"TC0TD0_POL_NR\",\r\n        TF2HC0.TC0TD0_ZUST_C          AS \"TC0TD0_ZUST_C\",\r\n        TF2HC0.TC0TD0_LF_NR           AS \"TC0TD0_LF_NR\",\r\n        TF2HC0.TC0T18_ID_NR           AS \"TF2HC0.TC0T18_ID_NR\",\r\n        TF2HC0.TC0TC0_LF_NR           AS \"TF2HC0.TC0TC0_LF_NR\",\r\n        TF2TC2.TC0T18_ID_NR_2         AS \"TC0T18_ID_NR_2\",\r\n        TF2TC2.TC0TC0_LF_NR_2         AS \"TC0TC0_LF_NR_2\",\r\n        \"2aLV2STLST\".TC0TC0_LF_NR     AS \"2aLV2STLST.TC0TC0_LF_NR\",\r\n        \"2aLV2STLST\".TC0T18_ID_NR     AS \"2aLV2STLST.TC0T18_ID_NR\"\r\n    FROM\r\n        (SELECT\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" AS \"TF2HD0.GLT_AB\",\r\n        \"1aLV1STLSTVertrag\".\"GLT_BIS\"       AS \"TF2HD0.GLT_BIS\",\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\" AS \"TF2HD0.ERF_AM\",\r\n        \r\n\r\n        TF2HC0.GLT_AB                       AS \"TF2HC0.GLT_AB\",\r\n        TF2HC0.GLT_BIS                      AS \"GLT_BIS\",\r\n        TF2HC0.ERF_AM                       AS \"TF2HC0.ERF_AM\",\r\n        TF2HC0.ERS_AM                       AS \"ERS_AM\",\r\n        TF2HC0.STAT_C                       AS \"STAT_C\",\r\n        TF2HC0.GSFTV_STAT_C                 AS \"GSFTV_STAT_C\",\r\n        TF2HC0.BEN_ID                       AS \"BEN_ID\",\r\n        TF2HC0.TC0TD0_POL_NR                AS \"TC0TD0_POL_NR\",\r\n        TF2HC0.TC0TD0_ZUST_C                AS \"TC0TD0_ZUST_C\",\r\n        TF2HC0.TC0TD0_LF_NR                 AS \"TC0TD0_LF_NR\",\r\n        TF2HC0.TC0T18_ID_NR                 AS \"TC0T18_ID_NR\",\r\n        TF2HC0.TC0TC0_LF_NR                 AS \"TC0TC0_LF_NR\",\r\n        TF2HC0.T31T31_ID_NR                 AS \"T31T31_ID_NR\"\r\n    FROM \r\n        ( SELECT \r\n    \r\n         TF2HD0.GLT_AB        AS \"TF2HD0.GLT_AB\"\r\n        ,TF2HD0.GLT_BIS       AS \"GLT_BIS\"\r\n        ,TF2HD0.ERF_AM        AS \"TF2HD0.ERF_AM\"\r\n        ,TF2HD0.ERS_AM        AS \"ERS_AM\"\r\n        ,TF2HD0.STAT_C        AS \"STAT_C\"\r\n        ,TF2HD0.GSFTV_STAT_C  AS \"GSFTV_STAT_C\"\r\n        ,TF2HD0.BEN_ID        AS \"BEN_ID\"\r\n        ,TF2HD0.TD0TD0_LF_NR  AS \"TD0TD0_LF_NR\"\r\n        ,TF2HD0.TD0TD0_ZUST_C AS \"TD0TD0_ZUST_C\"\r\n        ,TF2HD0.TD0TD0_POL_NR AS \"TD0TD0_POL_NR\"\r\n        ,TF2HD0.T31T31_ID_NR  AS \"T31T31_ID_NR\"\r\n        ,TF2HD0.BEN_ID_BARB   AS \"BEN_ID_BARB\"\r\n        ,TF2HD0.H18_ERF_AM    AS \"H18_ERF_AM\"\r\n        ,TF4TEC.GLT_AB        AS \"TF4TEC.GLT_AB\"\r\n        ,TF4TEC.ERF_AM        AS \"TF4TEC.ERF_AM\"\r\n        ,TF4TEC.T18T18_ID_NR  AS \"T18T18_ID_NR\"\r\n        ,TF4TEC.TD0_LF_NR     AS \"TD0_LF_NR\"\r\n    FROM \r\n        CHZIS1_P2000.P2000.TF4TEC AS TF4TEC  \r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HD0 AS TF2HD0 \r\n        ON \r\n            (TF4TEC.GLT_AB = TF2HD0.GLT_AB) \r\n            AND (TF4TEC.ERF_AM = TF2HD0.ERF_AM) \r\n            AND (TF4TEC.TD0_LF_NR = TF2HD0.TD0TD0_LF_NR) \r\n            AND (TF4TEC.TD0_ZUST_C = TF2HD0.TD0TD0_ZUST_C) \r\n            AND (TF4TEC.TD0_POL_NR = TF2HD0.TD0TD0_POL_NR)\r\n    WHERE \r\n        TF4TEC.TD0_POL_NR = 15780800 ) AS \"1aLV1STLSTVertrag\"\r\n    INNER JOIN\r\n        CHZIS1_P2000.P2000.TF2HC0 AS TF2HC0  \r\n        ON \r\n            TF2HC0.TC0TD0_POL_NR     = \"1aLV1STLSTVertrag\".TD0TD0_POL_NR \r\n            AND TF2HC0.TC0TD0_ZUST_C = \"1aLV1STLSTVertrag\".TD0TD0_ZUST_C \r\n            AND TF2HC0.TC0TD0_LF_NR  = \"1aLV1STLSTVertrag\".TD0TD0_LF_NR\r\n            AND TF2HC0.GLT_AB       <= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\"\r\n            AND TF2HC0.GLT_BIS      >= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" \r\n            AND TF2HC0.ERF_AM       <= \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n            AND TF2HC0.ERS_AM        > \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n\r\n            \r\n            AND TF2HC0.STAT_C        = \"1aLV1STLSTVertrag\".STAT_C\r\n\r\n    WHERE\r\n        TF2HC0.TC0T18_ID_NR IN (10682)) AS \"2aLV2STLST\"\r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2TC2 AS TF2TC2   \r\n        ON\r\n                \"2aLV2STLST\".TC0TD0_POL_NR = TF2TC2.TC0TD0_POL_NR_2\r\n            AND \"2aLV2STLST\".TC0TD0_ZUST_C = TF2TC2.TC0TD0_ZUST_C_2\r\n            AND \"2aLV2STLST\".TC0TD0_LF_NR  = TF2TC2.TC0TD0_LF_NR_2\r\n            AND \"2aLV2STLST\".TC0T18_ID_NR  = TF2TC2.TC0T18_ID_NR_2\r\n            AND \"2aLV2STLST\".TC0TC0_LF_NR  = TF2TC2.TC0TC0_LF_NR_2\r\n\r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HC0 AS TF2HC0 \r\n        ON \r\n                TF2TC2.TC0TD0_POL_NR_1 = TF2HC0.TC0TD0_POL_NR\r\n            AND TF2TC2.TC0TD0_ZUST_C_1 = TF2HC0.TC0TD0_ZUST_C\r\n            AND TF2TC2.TC0TD0_LF_NR_1  = TF2HC0.TC0TD0_LF_NR\r\n            AND TF2TC2.TC0T18_ID_NR_1  = TF2HC0.TC0T18_ID_NR\r\n            AND TF2TC2.TC0TC0_LF_NR_1  = TF2HC0.TC0TC0_LF_NR\r\n\r\n    WHERE \r\n            TF2HC0.GLT_AB  <= \"2aLV2STLST\".\"TF2HD0.GLT_AB\"\r\n        AND TF2HC0.GLT_BIS >= \"2aLV2STLST\".\"TF2HD0.GLT_AB\"\r\n        AND TF2HC0.ERF_AM  <= \"2aLV2STLST\".\"TF2HD0.ERF_AM\"\r\n        AND TF2HC0.ERS_AM  >  \"2aLV2STLST\".\"TF2HD0.ERF_AM\" ) AS \"3aLv3STLST\" \r\n\r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2TG0 AS TF2TG0  \r\n            ON      \"3aLv3STLST\".\"TF2HC0.TC0TC0_LF_NR\" = TF2TG0.TC0TC0_LF_NR\r\n                AND \"3aLv3STLST\".\"TF2HC0.TC0T18_ID_NR\" = TF2TG0.TC0T18_ID_NR\r\n                AND \"3aLv3STLST\".TC0TD0_LF_NR          = TF2TG0.TC0TD0_LF_NR\r\n                AND \"3aLv3STLST\".TC0TD0_ZUST_C         = TF2TG0.TC0TD0_ZUST_C\r\n                AND \"3aLv3STLST\".TC0TD0_POL_NR         = TF2TG0.TC0TD0_POL_NR\r\n\r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HG0 AS TF2HG0  \r\n            ON \r\n                TF2TG0.ID_NR = TF2HG0.TG0TG0_ID_NR\r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2TG1 AS TF2TG1   \r\n        ON \r\n            TF2HG0.TG0TG0_ID_NR = TF2TG1.TG0TG0_ID_NR\r\n    WHERE \r\n            TF2HG0.GLT_AB  <= \"3aLv3STLST\".GLT_AB \r\n        AND TF2HG0.GLT_BIS >= \"3aLv3STLST\".GLT_AB \r\n        AND TF2HG0.ERF_AM  <= \"3aLv3STLST\".ERF_AM \r\n        AND TF2HG0.ERS_AM  >  \"3aLv3STLST\".ERF_AM \r\n        AND TF2TG1.GLT_AB  <= \"3aLv3STLST\".GLT_AB \r\n        AND TF2TG1.GLT_BIS >= \"3aLv3STLST\".GLT_AB \r\n        AND TF2TG1.ERF_AM  <= \"3aLv3STLST\".ERF_AM \r\n        AND TF2TG1.ERS_AM  >  \"3aLv3STLST\".ERF_AM",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "1c9451f6-10a6-49cc-8649-7e98bcc2424d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vConcatSuffix",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": ")",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "1e6dada5-80bb-43ad-bf31-143e537f3cd1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vTestMode",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "0",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "22120b8b-869e-4905-9f9d-9f59f31a03e7",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "%STLST_Objekte in STLST",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(STLST_TD0TD0_POL_NR, STLST_TD0TD0_ZUST_C, STLST_TD0TD0_LF_NR, STLST_T18T18_ID_NR, STLST_LF_NR) AS [%STLST_Objekte]",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "27de4424-5e68-42ed-a9e4-5e59584da0b3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vConcatPrefix",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "2b7db19d-b886-46b7-83c0-9d56c094ff63",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "2",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "3a3cce48-ade7-4c20-aa4f-8e6f13259092",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "9",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "9",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "50cfc5f5-bcf8-4d86-aaa1-76b2706de3d1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "1cV1MRK",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "SELECT\r\n        \"1aLV1STLSTVertrag\".T18T18_ID_NR    AS \"T18T18_ID_NR\",              \r\n        \"1aLV1STLSTVertrag\".TD0_LF_NR       AS \"TD0_LF_NR\",                 \r\n\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" AS \"TF2HD0.GLT_AB\",             \r\n        \"1aLV1STLSTVertrag\".GLT_BIS         AS \"1aLV1STLSTVertrag.GLT_BIS\",\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\" AS \"TF2HD0.ERF_AM\",             \r\n\r\n    \r\n        TF2TG0.ID_NR                        AS \"ID_NR\",                     \r\n        TF2TG0.KL_C                         AS \"KL_C\",\r\n        TF2TG0.ABH_ROL_C                    AS \"ABH_ROL_C\",\r\n        TF2TG0.DMY                          AS \"DMY\",\r\n        TF2TG0.FKT_C                        AS \"FKT_C\",\r\n        TF2TG0.FKT_NR                       AS \"FKT_NR\",\r\n        TF2TG0.T20T20_ID_NR                 AS \"T20T20_ID_NR\",\r\n        TF2TG0.TC0TD0_POL_NR                AS \"TC0TD0_POL_NR\",\r\n        TF2TG0.TC0TD0_ZUST_C                AS \"TC0TD0_ZUST_C\",\r\n        TF2TG0.TC0TD0_LF_NR                 AS \"TC0TD0_LF_NR\",\r\n        TF2TG0.TC0T18_ID_NR                 AS \"TC0T18_ID_NR\",\r\n        TF2TG0.TC0TC0_LF_NR                 AS \"TC0TC0_LF_NR\",\r\n        TF2TG0.TD0TD0_LF_NR                 AS \"TD0TD0_LF_NR\",\r\n        TF2TG0.TD0TD0_ZUST_C                AS \"TD0TD0_ZUST_C\",\r\n        TF2TG0.TD0TD0_POL_NR                AS \"TD0TD0_POL_NR\",\r\n        TF2TG0.TZ0TZ0_ID_NR                 AS \"TZ0TZ0_ID_NR\",\r\n        TF2TG0.LF_NR                        AS \"LF_NR\",\r\n        TF2TG0.TZ0_ID_NR                    AS \"TZ0_ID_NR\",\r\n\r\n    \r\n        TF2HG0.GLT_AB                       AS \"TF2HG0.GLT_AB\",\r\n        TF2HG0.GLT_BIS                      AS \"TF2HG0.GLT_BIS\",\r\n        TF2HG0.ERF_AM                       AS \"TF2HG0.ERF_AM\",\r\n        TF2HG0.ERS_AM                       AS \"1bV1KLS.ERS_AM\",\r\n        TF2HG0.LOE_C                        AS \"1bV1KLS.LOE_C\",\r\n        TF2HG0.TG0TG0_ID_NR                 AS \"TG0TG0_ID_NR\",\r\n\r\n    \r\n        TF2TG1.GLT_AB                       AS \"TF2TG1.GLT_AB\",\r\n        TF2TG1.GLT_BIS                      AS \"TF2TG1.GLT_BIS\",\r\n        TF2TG1.ERF_AM                       AS \"TF2TG1.ERF_AM\",\r\n        TF2TG1.ERS_AM                       AS \"TF2TG1.ERS_AM\",\r\n        TF2TG1.UNIV_WERT                    AS \"UNIV_WERT\",\r\n        TF2TG1.LOE_C                        AS \"TF2TG1.LOE_C\",\r\n        TF2TG1.TG0TG0_ID_NR                 AS \"TF2TG1.TG0TG0_ID_NR\",\r\n        TF2TG1.T19T19_ID_NR                 AS \"T19T19_ID_NR\"\r\n\r\n    FROM \r\n        ( SELECT \r\n    \r\n         TF2HD0.GLT_AB        AS \"TF2HD0.GLT_AB\"\r\n        ,TF2HD0.GLT_BIS       AS \"GLT_BIS\"\r\n        ,TF2HD0.ERF_AM        AS \"TF2HD0.ERF_AM\"\r\n        ,TF2HD0.ERS_AM        AS \"ERS_AM\"\r\n        ,TF2HD0.STAT_C        AS \"STAT_C\"\r\n        ,TF2HD0.GSFTV_STAT_C  AS \"GSFTV_STAT_C\"\r\n        ,TF2HD0.BEN_ID        AS \"BEN_ID\"\r\n        ,TF2HD0.TD0TD0_LF_NR  AS \"TD0TD0_LF_NR\"\r\n        ,TF2HD0.TD0TD0_ZUST_C AS \"TD0TD0_ZUST_C\"\r\n        ,TF2HD0.TD0TD0_POL_NR AS \"TD0TD0_POL_NR\"\r\n        ,TF2HD0.T31T31_ID_NR  AS \"T31T31_ID_NR\"\r\n        ,TF2HD0.BEN_ID_BARB   AS \"BEN_ID_BARB\"\r\n        ,TF2HD0.H18_ERF_AM    AS \"H18_ERF_AM\"\r\n        ,TF4TEC.GLT_AB        AS \"TF4TEC.GLT_AB\"\r\n        ,TF4TEC.ERF_AM        AS \"TF4TEC.ERF_AM\"\r\n        ,TF4TEC.T18T18_ID_NR  AS \"T18T18_ID_NR\"\r\n        ,TF4TEC.TD0_LF_NR     AS \"TD0_LF_NR\"\r\n    FROM \r\n        CHZIS1_P2000.P2000.TF4TEC AS TF4TEC  \r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HD0 AS TF2HD0 \r\n        ON \r\n            (TF4TEC.GLT_AB = TF2HD0.GLT_AB) \r\n            AND (TF4TEC.ERF_AM = TF2HD0.ERF_AM) \r\n            AND (TF4TEC.TD0_LF_NR = TF2HD0.TD0TD0_LF_NR) \r\n            AND (TF4TEC.TD0_ZUST_C = TF2HD0.TD0TD0_ZUST_C) \r\n            AND (TF4TEC.TD0_POL_NR = TF2HD0.TD0TD0_POL_NR)\r\n    WHERE \r\n        TF4TEC.TD0_POL_NR = 15780800 ) AS \"1aLV1STLSTVertrag\"\r\n    INNER JOIN\r\n        CHZIS1_P2000.P2000.TF2TG0 AS TF2TG0   \r\n        ON \r\n            \"1aLV1STLSTVertrag\".TD0TD0_POL_NR     =  TF2TG0.TD0TD0_POL_NR \r\n            AND \"1aLV1STLSTVertrag\".TD0TD0_LF_NR  =  TF2TG0.TD0TD0_LF_NR \r\n            AND \"1aLV1STLSTVertrag\".TD0TD0_ZUST_C =  TF2TG0.TD0TD0_ZUST_C     \r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HG0 AS TF2HG0   \r\n        ON\r\n            TF2TG0.ID_NR                     =  TF2HG0.TG0TG0_ID_NR\r\n            AND TF2HG0.GLT_AB                <= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" \r\n            AND TF2HG0.ERF_AM                <= \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\" \r\n            AND TF2HG0.ERS_AM                >  \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\" \r\n            AND TF2HG0.GLT_BIS               >= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\"\r\n\r\n    INNER JOIN\r\n        CHZIS1_P2000.P2000.TF2TG1 AS TF2TG1    \r\n        ON\r\n            \r\n            TF2TG0.ID_NR         = TF2TG1.TG0TG0_ID_NR\r\n            \r\n            AND TF2TG1.\"GLT_AB\" <= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" \r\n            \r\n            AND TF2TG1.GLT_BIS  >= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\"\r\n            \r\n            AND TF2TG1.ERF_AM   <= \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n            \r\n            AND TF2TG1.ERS_AM   > \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\""
+  },
+  {
+    "qInfo": {
+      "qId": "51eab308-cfa2-4729-a0e3-4112e31c0c4e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "1aLV1STLSTVertrag",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "SELECT \r\n    \r\n         TF2HD0.GLT_AB        AS \"TF2HD0.GLT_AB\"\r\n        ,TF2HD0.GLT_BIS       AS \"GLT_BIS\"\r\n        ,TF2HD0.ERF_AM        AS \"TF2HD0.ERF_AM\"\r\n        ,TF2HD0.ERS_AM        AS \"ERS_AM\"\r\n        ,TF2HD0.STAT_C        AS \"STAT_C\"\r\n        ,TF2HD0.GSFTV_STAT_C  AS \"GSFTV_STAT_C\"\r\n        ,TF2HD0.BEN_ID        AS \"BEN_ID\"\r\n        ,TF2HD0.TD0TD0_LF_NR  AS \"TD0TD0_LF_NR\"\r\n        ,TF2HD0.TD0TD0_ZUST_C AS \"TD0TD0_ZUST_C\"\r\n        ,TF2HD0.TD0TD0_POL_NR AS \"TD0TD0_POL_NR\"\r\n        ,TF2HD0.T31T31_ID_NR  AS \"T31T31_ID_NR\"\r\n        ,TF2HD0.BEN_ID_BARB   AS \"BEN_ID_BARB\"\r\n        ,TF2HD0.H18_ERF_AM    AS \"H18_ERF_AM\"\r\n        ,TF4TEC.GLT_AB        AS \"TF4TEC.GLT_AB\"\r\n        ,TF4TEC.ERF_AM        AS \"TF4TEC.ERF_AM\"\r\n        ,TF4TEC.T18T18_ID_NR  AS \"T18T18_ID_NR\"\r\n        ,TF4TEC.TD0_LF_NR     AS \"TD0_LF_NR\"\r\n    FROM \r\n        CHZIS1_P2000.P2000.TF4TEC AS TF4TEC  \r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HD0 AS TF2HD0 \r\n        ON \r\n            (TF4TEC.GLT_AB = TF2HD0.GLT_AB) \r\n            AND (TF4TEC.ERF_AM = TF2HD0.ERF_AM) \r\n            AND (TF4TEC.TD0_LF_NR = TF2HD0.TD0TD0_LF_NR) \r\n            AND (TF4TEC.TD0_ZUST_C = TF2HD0.TD0TD0_ZUST_C) \r\n            AND (TF4TEC.TD0_POL_NR = TF2HD0.TD0TD0_POL_NR)\r\n    WHERE \r\n        TF4TEC.TD0_POL_NR = 15780800"
+  },
+  {
+    "qInfo": {
+      "qId": "547752d9-d01a-4723-b513-98ef852b9be5",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "%STLST_Objekte in Objekte",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(Obj_Vertrag_NR, Obj_Vertrag_ZUST_C, Obj_Vertrag_LF_NR, Obj_T18_ID_NR, Obj_TC0TC0_LF_NR) AS [%STLST_Objekte]",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "581917aa-745f-4260-80e0-0c6f7e768c73",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "%Attribute_KTG Mapping in KTG Mapping",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(T18_ID_NR, T20_ID_NR, T30_R, T19_ID_NR) AS [%Attribute_KTG Mapping]",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "639442ca-337f-40ed-a63d-09fbf3bd55e1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "10",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "10",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "65d6775a-6ef4-402a-a202-ae7b12d7f319",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Loop 352/352  New Result rows: ",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "6a9c4a8c-1d45-4a55-b1de-2de1bff3f88c",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vExportFolder",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://19.P2000/4.Export",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "6ae4f20b-ec10-4b31-89eb-cb43578e7290",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "%Objekte_Attribute in Attribute",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(MRK_TG0TG0_ID_NR) AS [%Objekte_Attribute]",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "700cb52c-c6ca-471d-b320-b3248f37d8b3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vDBSchema",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "CHZIS1_P2000.P2000",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "70ec2d08-c1f2-4d0f-abf9-67b367960c8b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vLoopStart",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "2021-01-27 02.04.44",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "71875911-8cfb-46cd-b986-7c1a4147826d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vT18_ID_NR",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "10679",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "735d4e26-5fb6-4bbd-afb1-ce79912cdb80",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "5",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "5",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "7846dbe1-6f16-47ca-a84b-70e2f5af9834",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vGroupSize",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "300",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "7ddee1b1-e182-4cee-a3a6-1dfe179cf00d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "6",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "6",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "843018da-4fdb-40d7-a590-b1290814866a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vPOL_NRs",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "29223819,29223820,29223824,29223825,29223827,29223828,29223829,29223830,29223832,29223833,29223834,29223835,29223836,29223837,29223838,29223839,29223840,29223841,29223842,29223847,29223848,29223849,29223850,29223851,29223852,29223853,29223856,29223857,29223858,29223859,29223860,29223861,29223862,29223863,29223864,29223865,29223866,29223867,29223868,29223869,29223874,29223875,29223876,29223877,29223878,29224232,29224233,29224234,29224236,29224239,29224260,29224286,29224287,29224297,29224298,29224299,29224300,29224301,29224306,29224307,29224308,29224310,29224382,29224446,29224477,29224486,29224493,29224494,29224496,29224498,29224500,29224501,29224502,29224503,29224504,29224505,29224506,29224507,29224508,29224509,29224510,29224511,29224512,29224513,49200018,49200020,49200024,49200030,49200031,49200064,49200066,49200067,69200045,69200046",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "87dbff18-22e6-45ee-8757-4ce6b0207028",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "11",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "11",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "8b88c5e8-1991-45d6-b7be-2a988410b1c2",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMode",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "941edb67-93db-44a6-905f-a07aad881556",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vInvolvedFiles",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\nResult: NOCONCATENATE LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0001.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0002.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0003.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0004.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0005.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0006.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0007.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0008.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0009.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0010.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0011.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0012.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0013.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0014.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0015.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0016.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0017.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0018.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0019.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0020.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0021.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0022.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0023.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0024.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0025.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0026.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0027.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0028.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0029.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0030.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0031.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0032.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0033.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0034.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0035.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0036.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0037.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0038.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0039.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0040.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0041.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0042.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0043.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0044.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0045.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0046.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0047.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0048.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0049.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0050.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0051.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0052.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0053.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0054.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0055.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0056.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0057.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0058.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0059.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0060.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0061.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0062.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0063.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0064.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0065.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0066.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0067.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0068.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0069.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0070.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0071.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0072.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0073.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0074.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0075.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0076.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0077.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0078.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0079.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0080.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0081.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0082.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0083.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0084.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0085.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0086.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0087.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0088.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0089.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0090.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0091.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0092.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0093.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0094.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0095.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0096.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0097.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0098.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0099.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0100.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0101.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0102.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0103.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0104.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0105.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0106.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0107.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0108.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0109.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0110.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0111.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0112.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0113.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0114.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0115.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0116.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0117.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0118.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0119.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0120.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0121.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0122.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0123.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0124.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0125.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0126.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0127.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0128.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0129.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0130.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0131.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0132.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0133.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0134.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0135.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0136.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0137.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0138.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0139.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0140.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0141.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0142.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0143.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0144.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0145.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0146.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0147.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0148.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0149.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0150.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0151.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0152.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0153.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0154.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0155.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0156.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0157.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0158.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0159.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0160.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0161.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0162.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0163.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0164.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0165.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0166.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0167.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0168.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0169.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0170.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0171.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0172.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0173.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0174.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0175.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0176.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0177.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0178.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0179.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0180.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0181.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0182.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0183.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0184.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0185.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0186.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0187.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0188.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0189.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0190.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0191.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0192.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0193.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0194.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0195.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0196.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0197.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0198.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0199.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0200.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0201.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0202.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0203.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0204.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0205.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0206.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0207.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0208.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0209.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0210.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0211.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0212.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0213.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0214.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0215.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0216.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0217.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0218.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0219.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0220.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0221.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0222.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0223.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0224.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0225.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0226.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0227.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0228.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0229.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0230.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0231.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0232.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0233.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0234.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0235.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0236.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0237.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0238.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0239.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0240.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0241.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0242.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0243.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0244.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0245.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0246.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0247.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0248.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0249.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0250.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0251.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0252.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0253.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0254.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0255.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0256.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0257.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0258.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0259.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0260.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0261.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0262.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0263.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0264.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0265.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0266.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0267.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0268.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0269.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0270.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0271.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0272.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0273.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0274.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0275.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0276.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0277.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0278.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0279.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0280.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0281.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0282.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0283.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0284.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0285.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0286.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0287.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0288.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0289.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0290.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0291.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0292.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0293.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0294.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0295.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0296.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0297.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0298.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0299.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0300.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0301.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0302.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0303.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0304.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0305.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0306.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0307.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0308.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0309.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0310.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0311.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0312.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0313.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0314.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0315.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0316.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0317.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0318.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0319.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0320.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0321.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0322.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0323.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0324.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0325.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0326.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0327.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0328.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0329.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0330.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0331.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0332.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0333.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0334.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0335.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0336.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0337.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0338.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0339.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0340.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0341.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0342.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0343.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0344.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0345.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0346.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0347.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0348.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0349.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0350.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0351.qvd] (qvd);\nCONCATENATE (Result) LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [lib://19.P2000/4.Export/Result_10679_part0352.qvd] (qvd);",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "a7462887-6ab1-4642-a406-acb6bc5e0cd8",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "3aLv3STLST",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "SELECT\r\n        \"2aLV2STLST\".\"TF2HD0.GLT_AB\"  AS \"GLT_AB\",\r\n        \"2aLV2STLST\".\"TF2HD0.GLT_BIS\" AS \"GLT_BIS\",\r\n        \"2aLV2STLST\".\"TF2HD0.ERF_AM\"  AS \"ERF_AM\",\r\n        TF2HC0.TC0TD0_POL_NR          AS \"TC0TD0_POL_NR\",\r\n        TF2HC0.TC0TD0_ZUST_C          AS \"TC0TD0_ZUST_C\",\r\n        TF2HC0.TC0TD0_LF_NR           AS \"TC0TD0_LF_NR\",\r\n        TF2HC0.TC0T18_ID_NR           AS \"TF2HC0.TC0T18_ID_NR\",\r\n        TF2HC0.TC0TC0_LF_NR           AS \"TF2HC0.TC0TC0_LF_NR\",\r\n        TF2TC2.TC0T18_ID_NR_2         AS \"TC0T18_ID_NR_2\",\r\n        TF2TC2.TC0TC0_LF_NR_2         AS \"TC0TC0_LF_NR_2\",\r\n        \"2aLV2STLST\".TC0TC0_LF_NR     AS \"2aLV2STLST.TC0TC0_LF_NR\",\r\n        \"2aLV2STLST\".TC0T18_ID_NR     AS \"2aLV2STLST.TC0T18_ID_NR\"\r\n    FROM\r\n        (SELECT\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" AS \"TF2HD0.GLT_AB\",\r\n        \"1aLV1STLSTVertrag\".\"GLT_BIS\"       AS \"TF2HD0.GLT_BIS\",\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\" AS \"TF2HD0.ERF_AM\",\r\n        \r\n\r\n        TF2HC0.GLT_AB                       AS \"TF2HC0.GLT_AB\",\r\n        TF2HC0.GLT_BIS                      AS \"GLT_BIS\",\r\n        TF2HC0.ERF_AM                       AS \"TF2HC0.ERF_AM\",\r\n        TF2HC0.ERS_AM                       AS \"ERS_AM\",\r\n        TF2HC0.STAT_C                       AS \"STAT_C\",\r\n        TF2HC0.GSFTV_STAT_C                 AS \"GSFTV_STAT_C\",\r\n        TF2HC0.BEN_ID                       AS \"BEN_ID\",\r\n        TF2HC0.TC0TD0_POL_NR                AS \"TC0TD0_POL_NR\",\r\n        TF2HC0.TC0TD0_ZUST_C                AS \"TC0TD0_ZUST_C\",\r\n        TF2HC0.TC0TD0_LF_NR                 AS \"TC0TD0_LF_NR\",\r\n        TF2HC0.TC0T18_ID_NR                 AS \"TC0T18_ID_NR\",\r\n        TF2HC0.TC0TC0_LF_NR                 AS \"TC0TC0_LF_NR\",\r\n        TF2HC0.T31T31_ID_NR                 AS \"T31T31_ID_NR\"\r\n    FROM \r\n        ( SELECT \r\n    \r\n         TF2HD0.GLT_AB        AS \"TF2HD0.GLT_AB\"\r\n        ,TF2HD0.GLT_BIS       AS \"GLT_BIS\"\r\n        ,TF2HD0.ERF_AM        AS \"TF2HD0.ERF_AM\"\r\n        ,TF2HD0.ERS_AM        AS \"ERS_AM\"\r\n        ,TF2HD0.STAT_C        AS \"STAT_C\"\r\n        ,TF2HD0.GSFTV_STAT_C  AS \"GSFTV_STAT_C\"\r\n        ,TF2HD0.BEN_ID        AS \"BEN_ID\"\r\n        ,TF2HD0.TD0TD0_LF_NR  AS \"TD0TD0_LF_NR\"\r\n        ,TF2HD0.TD0TD0_ZUST_C AS \"TD0TD0_ZUST_C\"\r\n        ,TF2HD0.TD0TD0_POL_NR AS \"TD0TD0_POL_NR\"\r\n        ,TF2HD0.T31T31_ID_NR  AS \"T31T31_ID_NR\"\r\n        ,TF2HD0.BEN_ID_BARB   AS \"BEN_ID_BARB\"\r\n        ,TF2HD0.H18_ERF_AM    AS \"H18_ERF_AM\"\r\n        ,TF4TEC.GLT_AB        AS \"TF4TEC.GLT_AB\"\r\n        ,TF4TEC.ERF_AM        AS \"TF4TEC.ERF_AM\"\r\n        ,TF4TEC.T18T18_ID_NR  AS \"T18T18_ID_NR\"\r\n        ,TF4TEC.TD0_LF_NR     AS \"TD0_LF_NR\"\r\n    FROM \r\n        CHZIS1_P2000.P2000.TF4TEC AS TF4TEC  \r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HD0 AS TF2HD0 \r\n        ON \r\n            (TF4TEC.GLT_AB = TF2HD0.GLT_AB) \r\n            AND (TF4TEC.ERF_AM = TF2HD0.ERF_AM) \r\n            AND (TF4TEC.TD0_LF_NR = TF2HD0.TD0TD0_LF_NR) \r\n            AND (TF4TEC.TD0_ZUST_C = TF2HD0.TD0TD0_ZUST_C) \r\n            AND (TF4TEC.TD0_POL_NR = TF2HD0.TD0TD0_POL_NR)\r\n    WHERE \r\n        TF4TEC.TD0_POL_NR = 15780800 ) AS \"1aLV1STLSTVertrag\"\r\n    INNER JOIN\r\n        CHZIS1_P2000.P2000.TF2HC0 AS TF2HC0  \r\n        ON \r\n            TF2HC0.TC0TD0_POL_NR     = \"1aLV1STLSTVertrag\".TD0TD0_POL_NR \r\n            AND TF2HC0.TC0TD0_ZUST_C = \"1aLV1STLSTVertrag\".TD0TD0_ZUST_C \r\n            AND TF2HC0.TC0TD0_LF_NR  = \"1aLV1STLSTVertrag\".TD0TD0_LF_NR\r\n            AND TF2HC0.GLT_AB       <= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\"\r\n            AND TF2HC0.GLT_BIS      >= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" \r\n            AND TF2HC0.ERF_AM       <= \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n            AND TF2HC0.ERS_AM        > \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n\r\n            \r\n            AND TF2HC0.STAT_C        = \"1aLV1STLSTVertrag\".STAT_C\r\n\r\n    WHERE\r\n        TF2HC0.TC0T18_ID_NR IN (10682)) AS \"2aLV2STLST\"\r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2TC2 AS TF2TC2   \r\n        ON\r\n                \"2aLV2STLST\".TC0TD0_POL_NR = TF2TC2.TC0TD0_POL_NR_2\r\n            AND \"2aLV2STLST\".TC0TD0_ZUST_C = TF2TC2.TC0TD0_ZUST_C_2\r\n            AND \"2aLV2STLST\".TC0TD0_LF_NR  = TF2TC2.TC0TD0_LF_NR_2\r\n            AND \"2aLV2STLST\".TC0T18_ID_NR  = TF2TC2.TC0T18_ID_NR_2\r\n            AND \"2aLV2STLST\".TC0TC0_LF_NR  = TF2TC2.TC0TC0_LF_NR_2\r\n\r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HC0 AS TF2HC0 \r\n        ON \r\n                TF2TC2.TC0TD0_POL_NR_1 = TF2HC0.TC0TD0_POL_NR\r\n            AND TF2TC2.TC0TD0_ZUST_C_1 = TF2HC0.TC0TD0_ZUST_C\r\n            AND TF2TC2.TC0TD0_LF_NR_1  = TF2HC0.TC0TD0_LF_NR\r\n            AND TF2TC2.TC0T18_ID_NR_1  = TF2HC0.TC0T18_ID_NR\r\n            AND TF2TC2.TC0TC0_LF_NR_1  = TF2HC0.TC0TC0_LF_NR\r\n\r\n    WHERE \r\n            TF2HC0.GLT_AB  <= \"2aLV2STLST\".\"TF2HD0.GLT_AB\"\r\n        AND TF2HC0.GLT_BIS >= \"2aLV2STLST\".\"TF2HD0.GLT_AB\"\r\n        AND TF2HC0.ERF_AM  <= \"2aLV2STLST\".\"TF2HD0.ERF_AM\"\r\n        AND TF2HC0.ERS_AM  >  \"2aLV2STLST\".\"TF2HD0.ERF_AM\""
+  },
+  {
+    "qInfo": {
+      "qId": "a8d9174c-7ff3-4279-be1c-f96eb0eea1b5",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "4",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "4",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "abe40059-0a4e-498c-b8b9-e4d8b399ee69",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "%Attribute_KTG Mapping in Attribute",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(MRK_T18_ID_NR, MRK_T20T20_ID_NR, MRK_ABH_ROL_C, MRK_T19T19_ID_NR) AS [%Attribute_KTG Mapping]",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "abed834e-3bd1-4d00-9186-43f9bbe9a180",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "7",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "7",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "b04d91de-fd35-4a70-9338-abde3fc4415d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "b08244bf-18aa-428b-963f-ffefff4bb05f",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "2bLV2MRK",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "SELECT \r\n        \"2aLV2STLST\".\"TF2HD0.GLT_AB\", \r\n        \"2aLV2STLST\".\"TF2HD0.GLT_BIS\", \r\n        \"2aLV2STLST\".\"TF2HD0.ERF_AM\", \r\n        \r\n        TF2TG0.ID_NR, \r\n        TF2TG0.TC0TD0_POL_NR,\r\n        TF2TG0.TC0TD0_ZUST_C, \r\n        TF2TG0.TC0TD0_LF_NR,\r\n        TF2TG0.TC0T18_ID_NR, \r\n        TF2TG0.TC0TC0_LF_NR, \r\n        TF2TG0.T20T20_ID_NR, \r\n        TF2TG0.ABH_ROL_C, \r\n        TF2TG0.FKT_C, \r\n        TF2TG0.FKT_NR, \r\n        TF2TG0.LF_NR, \r\n        TF2HG0.LOE_C, \r\n        TF2HG0.GLT_AB, \r\n        TF2HG0.GLT_BIS, \r\n        TF2TG1.T19T19_ID_NR, \r\n        TF2TG1.UNIV_WERT\r\n\r\n    FROM \r\n        (SELECT\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" AS \"TF2HD0.GLT_AB\",\r\n        \"1aLV1STLSTVertrag\".\"GLT_BIS\"       AS \"TF2HD0.GLT_BIS\",\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\" AS \"TF2HD0.ERF_AM\",\r\n        \r\n\r\n        TF2HC0.GLT_AB                       AS \"TF2HC0.GLT_AB\",\r\n        TF2HC0.GLT_BIS                      AS \"GLT_BIS\",\r\n        TF2HC0.ERF_AM                       AS \"TF2HC0.ERF_AM\",\r\n        TF2HC0.ERS_AM                       AS \"ERS_AM\",\r\n        TF2HC0.STAT_C                       AS \"STAT_C\",\r\n        TF2HC0.GSFTV_STAT_C                 AS \"GSFTV_STAT_C\",\r\n        TF2HC0.BEN_ID                       AS \"BEN_ID\",\r\n        TF2HC0.TC0TD0_POL_NR                AS \"TC0TD0_POL_NR\",\r\n        TF2HC0.TC0TD0_ZUST_C                AS \"TC0TD0_ZUST_C\",\r\n        TF2HC0.TC0TD0_LF_NR                 AS \"TC0TD0_LF_NR\",\r\n        TF2HC0.TC0T18_ID_NR                 AS \"TC0T18_ID_NR\",\r\n        TF2HC0.TC0TC0_LF_NR                 AS \"TC0TC0_LF_NR\",\r\n        TF2HC0.T31T31_ID_NR                 AS \"T31T31_ID_NR\"\r\n    FROM \r\n        ( SELECT \r\n    \r\n         TF2HD0.GLT_AB        AS \"TF2HD0.GLT_AB\"\r\n        ,TF2HD0.GLT_BIS       AS \"GLT_BIS\"\r\n        ,TF2HD0.ERF_AM        AS \"TF2HD0.ERF_AM\"\r\n        ,TF2HD0.ERS_AM        AS \"ERS_AM\"\r\n        ,TF2HD0.STAT_C        AS \"STAT_C\"\r\n        ,TF2HD0.GSFTV_STAT_C  AS \"GSFTV_STAT_C\"\r\n        ,TF2HD0.BEN_ID        AS \"BEN_ID\"\r\n        ,TF2HD0.TD0TD0_LF_NR  AS \"TD0TD0_LF_NR\"\r\n        ,TF2HD0.TD0TD0_ZUST_C AS \"TD0TD0_ZUST_C\"\r\n        ,TF2HD0.TD0TD0_POL_NR AS \"TD0TD0_POL_NR\"\r\n        ,TF2HD0.T31T31_ID_NR  AS \"T31T31_ID_NR\"\r\n        ,TF2HD0.BEN_ID_BARB   AS \"BEN_ID_BARB\"\r\n        ,TF2HD0.H18_ERF_AM    AS \"H18_ERF_AM\"\r\n        ,TF4TEC.GLT_AB        AS \"TF4TEC.GLT_AB\"\r\n        ,TF4TEC.ERF_AM        AS \"TF4TEC.ERF_AM\"\r\n        ,TF4TEC.T18T18_ID_NR  AS \"T18T18_ID_NR\"\r\n        ,TF4TEC.TD0_LF_NR     AS \"TD0_LF_NR\"\r\n    FROM \r\n        CHZIS1_P2000.P2000.TF4TEC AS TF4TEC  \r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HD0 AS TF2HD0 \r\n        ON \r\n            (TF4TEC.GLT_AB = TF2HD0.GLT_AB) \r\n            AND (TF4TEC.ERF_AM = TF2HD0.ERF_AM) \r\n            AND (TF4TEC.TD0_LF_NR = TF2HD0.TD0TD0_LF_NR) \r\n            AND (TF4TEC.TD0_ZUST_C = TF2HD0.TD0TD0_ZUST_C) \r\n            AND (TF4TEC.TD0_POL_NR = TF2HD0.TD0TD0_POL_NR)\r\n    WHERE \r\n        TF4TEC.TD0_POL_NR = 15780800 ) AS \"1aLV1STLSTVertrag\"\r\n    INNER JOIN\r\n        CHZIS1_P2000.P2000.TF2HC0 AS TF2HC0  \r\n        ON \r\n            TF2HC0.TC0TD0_POL_NR     = \"1aLV1STLSTVertrag\".TD0TD0_POL_NR \r\n            AND TF2HC0.TC0TD0_ZUST_C = \"1aLV1STLSTVertrag\".TD0TD0_ZUST_C \r\n            AND TF2HC0.TC0TD0_LF_NR  = \"1aLV1STLSTVertrag\".TD0TD0_LF_NR\r\n            AND TF2HC0.GLT_AB       <= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\"\r\n            AND TF2HC0.GLT_BIS      >= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" \r\n            AND TF2HC0.ERF_AM       <= \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n            AND TF2HC0.ERS_AM        > \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n\r\n            \r\n            AND TF2HC0.STAT_C        = \"1aLV1STLSTVertrag\".STAT_C\r\n\r\n    WHERE\r\n        TF2HC0.TC0T18_ID_NR IN (10682)) AS \"2aLV2STLST\" \r\n\r\n    INNER JOIN CHZIS1_P2000.P2000.TF2TG0 AS TF2TG0   \r\n        ON \r\n                \"2aLV2STLST\".TC0TD0_POL_NR = TF2TG0.TC0TD0_POL_NR \r\n            AND \"2aLV2STLST\".TC0TD0_ZUST_C = TF2TG0.TC0TD0_ZUST_C \r\n            AND \"2aLV2STLST\".TC0TD0_LF_NR  = TF2TG0.TC0TD0_LF_NR \r\n            AND \"2aLV2STLST\".TC0T18_ID_NR  = TF2TG0.TC0T18_ID_NR \r\n            AND \"2aLV2STLST\".TC0TC0_LF_NR  = TF2TG0.TC0TC0_LF_NR\r\n\r\n    INNER JOIN CHZIS1_P2000.P2000.TF2HG0 AS TF2HG0  \r\n        ON \r\n            TF2TG0.ID_NR = TF2HG0.TG0TG0_ID_NR\r\n\r\n    INNER JOIN CHZIS1_P2000.P2000.TF2TG1 AS TF2TG1  \r\n        ON \r\n            TF2TG0.ID_NR = TF2TG1.TG0TG0_ID_NR\r\n\r\n    \r\n    WHERE \r\n            (TF2HG0.GLT_AB  <= \"2aLV2STLST\".\"TF2HD0.GLT_AB\") \r\n        AND (TF2HG0.GLT_BIS >= \"2aLV2STLST\".\"TF2HD0.GLT_AB\") \r\n        AND (TF2HG0.ERF_AM  <= \"2aLV2STLST\".\"TF2HD0.ERF_AM\") \r\n        AND (TF2HG0.ERS_AM  >  \"2aLV2STLST\".\"TF2HD0.ERF_AM\") \r\n        AND (TF2TG1.GLT_AB  <= \"2aLV2STLST\".\"TF2HD0.GLT_AB\") \r\n        AND (TF2TG1.GLT_BIS >= \"2aLV2STLST\".\"TF2HD0.GLT_AB\") \r\n        AND (TF2TG1.ERF_AM  <= \"2aLV2STLST\".\"TF2HD0.ERF_AM\") \r\n        AND (TF2TG1.ERS_AM  >  \"2aLV2STLST\".\"TF2HD0.ERF_AM\")"
+  },
+  {
+    "qInfo": {
+      "qId": "ba7ce16e-b844-4a17-90a5-7ee174c778c1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vLeftTable",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Attribute",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "bf6a0bef-506a-495b-a84b-2b0f0f597087",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vRowsCheck2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "c2a49f6e-721e-497a-87ec-cb1b5cd6b5bd",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "3",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "3",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "c361550e-dc1b-4b8b-849a-b60a470f87bc",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vConcatSep",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": ", ",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "ca51ec4c-3fad-4eb0-a289-02145fede66a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "%Objekte_Attribute in Objekte",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(Obj_ID_NR) AS [%Objekte_Attribute]",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "d1970694-95b2-436f-af3b-88025817771d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vStoreFile",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://19.P2000/4.Export/Result_10679_part0352.qvd",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "d1b95a06-9a44-43d7-913e-c214468b80f9",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vStartScript",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "2021-01-26 22.13.02",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "d3c54b7e-8c3e-48a5-808d-5443bb026be1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "2aLV2STLST",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "SELECT\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" AS \"TF2HD0.GLT_AB\",\r\n        \"1aLV1STLSTVertrag\".\"GLT_BIS\"       AS \"TF2HD0.GLT_BIS\",\r\n        \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\" AS \"TF2HD0.ERF_AM\",\r\n        \r\n\r\n        TF2HC0.GLT_AB                       AS \"TF2HC0.GLT_AB\",\r\n        TF2HC0.GLT_BIS                      AS \"GLT_BIS\",\r\n        TF2HC0.ERF_AM                       AS \"TF2HC0.ERF_AM\",\r\n        TF2HC0.ERS_AM                       AS \"ERS_AM\",\r\n        TF2HC0.STAT_C                       AS \"STAT_C\",\r\n        TF2HC0.GSFTV_STAT_C                 AS \"GSFTV_STAT_C\",\r\n        TF2HC0.BEN_ID                       AS \"BEN_ID\",\r\n        TF2HC0.TC0TD0_POL_NR                AS \"TC0TD0_POL_NR\",\r\n        TF2HC0.TC0TD0_ZUST_C                AS \"TC0TD0_ZUST_C\",\r\n        TF2HC0.TC0TD0_LF_NR                 AS \"TC0TD0_LF_NR\",\r\n        TF2HC0.TC0T18_ID_NR                 AS \"TC0T18_ID_NR\",\r\n        TF2HC0.TC0TC0_LF_NR                 AS \"TC0TC0_LF_NR\",\r\n        TF2HC0.T31T31_ID_NR                 AS \"T31T31_ID_NR\"\r\n    FROM \r\n        ( SELECT \r\n    \r\n         TF2HD0.GLT_AB        AS \"TF2HD0.GLT_AB\"\r\n        ,TF2HD0.GLT_BIS       AS \"GLT_BIS\"\r\n        ,TF2HD0.ERF_AM        AS \"TF2HD0.ERF_AM\"\r\n        ,TF2HD0.ERS_AM        AS \"ERS_AM\"\r\n        ,TF2HD0.STAT_C        AS \"STAT_C\"\r\n        ,TF2HD0.GSFTV_STAT_C  AS \"GSFTV_STAT_C\"\r\n        ,TF2HD0.BEN_ID        AS \"BEN_ID\"\r\n        ,TF2HD0.TD0TD0_LF_NR  AS \"TD0TD0_LF_NR\"\r\n        ,TF2HD0.TD0TD0_ZUST_C AS \"TD0TD0_ZUST_C\"\r\n        ,TF2HD0.TD0TD0_POL_NR AS \"TD0TD0_POL_NR\"\r\n        ,TF2HD0.T31T31_ID_NR  AS \"T31T31_ID_NR\"\r\n        ,TF2HD0.BEN_ID_BARB   AS \"BEN_ID_BARB\"\r\n        ,TF2HD0.H18_ERF_AM    AS \"H18_ERF_AM\"\r\n        ,TF4TEC.GLT_AB        AS \"TF4TEC.GLT_AB\"\r\n        ,TF4TEC.ERF_AM        AS \"TF4TEC.ERF_AM\"\r\n        ,TF4TEC.T18T18_ID_NR  AS \"T18T18_ID_NR\"\r\n        ,TF4TEC.TD0_LF_NR     AS \"TD0_LF_NR\"\r\n    FROM \r\n        CHZIS1_P2000.P2000.TF4TEC AS TF4TEC  \r\n    INNER JOIN \r\n        CHZIS1_P2000.P2000.TF2HD0 AS TF2HD0 \r\n        ON \r\n            (TF4TEC.GLT_AB = TF2HD0.GLT_AB) \r\n            AND (TF4TEC.ERF_AM = TF2HD0.ERF_AM) \r\n            AND (TF4TEC.TD0_LF_NR = TF2HD0.TD0TD0_LF_NR) \r\n            AND (TF4TEC.TD0_ZUST_C = TF2HD0.TD0TD0_ZUST_C) \r\n            AND (TF4TEC.TD0_POL_NR = TF2HD0.TD0TD0_POL_NR)\r\n    WHERE \r\n        TF4TEC.TD0_POL_NR = 15780800 ) AS \"1aLV1STLSTVertrag\"\r\n    INNER JOIN\r\n        CHZIS1_P2000.P2000.TF2HC0 AS TF2HC0  \r\n        ON \r\n            TF2HC0.TC0TD0_POL_NR     = \"1aLV1STLSTVertrag\".TD0TD0_POL_NR \r\n            AND TF2HC0.TC0TD0_ZUST_C = \"1aLV1STLSTVertrag\".TD0TD0_ZUST_C \r\n            AND TF2HC0.TC0TD0_LF_NR  = \"1aLV1STLSTVertrag\".TD0TD0_LF_NR\r\n            AND TF2HC0.GLT_AB       <= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\"\r\n            AND TF2HC0.GLT_BIS      >= \"1aLV1STLSTVertrag\".\"TF2HD0.GLT_AB\" \r\n            AND TF2HC0.ERF_AM       <= \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n            AND TF2HC0.ERS_AM        > \"1aLV1STLSTVertrag\".\"TF2HD0.ERF_AM\"\r\n\r\n            \r\n            AND TF2HC0.STAT_C        = \"1aLV1STLSTVertrag\".STAT_C\r\n\r\n    WHERE\r\n        TF2HC0.TC0T18_ID_NR IN (10682)"
+  },
+  {
+    "qInfo": {
+      "qId": "d4f8546d-f356-46d3-9843-686955c761cd",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "13",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "13"
+  },
+  {
+    "qInfo": {
+      "qId": "d6b5e9fd-d781-4b17-a814-822510c92063",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vTest_POL_NRs",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "15898853",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "db95d710-8a89-4510-ad72-f484cdbbc61e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vTempFolder",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "lib://19.P2000/5.Import",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "dbb1f1e4-4898-4163-9b22-3245106302ff",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vLoopInfo",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Loop 352/352 ",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "dc3e981d-13e4-4d2c-ab11-a9ef4f98f92a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vExitAfter",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "de87262b-035c-4375-9be4-28deda7dd603",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "%PolHist_STLST in STLST",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Hash256(STLST_TD0TD0_POL_NR, STLST_TD0TD0_ZUST_C, STLST_TD0TD0_LF_NR, STLST_STAT_C) AS [%PolHist_STLST]",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "e14b1b0f-7c78-42c9-a543-cede6a6ad239",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "12",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "12"
+  },
+  {
+    "qInfo": {
+      "qId": "e1971882-ba1b-4038-aa20-fe25740bbb83",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vRightTable",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "KTG Mapping",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "e3d494ec-850d-4446-ab75-50f850ea5453",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vColsCheck1",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "f0d892ae-4d70-4d86-a4c1-52d96ac4a5e7",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "8",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "8",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "f5075050-8b04-436f-b43c-0d5c10b1bc8a",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vColsCheck2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "fd8712d9-0c4c-4080-9fd0-c50c6d97c2fa",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vLoopDuration",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "21",
+    "qIsScriptCreated": true
+  }
+]

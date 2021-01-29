@@ -1,0 +1,168 @@
+///$tab 9: Result
+/*
+Fabian's Combination
+
+SELECT polhist_glt_ab, 
+       polhist_glt_bis, 
+       polhist_erf_am, 
+       polhist_td0td0_lf_nr, 
+       polhist_td0td0_zust_c, 
+       polhist_td0td0_pol_nr, 
+       polhist_t31t31_id_nr, 
+       polhist_ben_id_barb, 
+       polhist_h18_erf_am, 
+       polhist_abl_dat, 
+       polhist_t18t18_id_nr, 
+       stlst_t18t18_id_nr, 
+       stlst_lf_nr, 
+       stlst_t31t31_id_nr, 
+       stlst_bezt18_id_nr, 
+       stlst_bez_lf_nr, 
+       stlst_glt_ab, 
+       stlst_glt_bis, 
+       stlst_erf_am, 
+       stlst_ers_am, 
+       obj_id_nr, 
+       obj_abh_rol_c, 
+       obj_fkt_c, 
+       obj_fkt_nr, 
+       obj_t20t20_id_nr, 
+       obj_glt_ab, 
+       obj_glt_bis, 
+       obj_erf_am, 
+       obj_ers_am, 
+       mrk_tg0tg0_id_nr, 
+       mrk_t19t19_id_nr, 
+       mrk_glt_ab, 
+       mrk_glt_bis, 
+       mrk_erf_am, 
+       mrk_ers_am, 
+       mrk_univ_wert,  
+       [ktg mapping defintionen].tabelle, 
+       [ktg mapping defintionen].attribut, 
+       [ktg mapping defintionen].beziehung, 
+       [ktg mapping defintionen].laufnummer
+FROM   
+    [ktg mapping defintionen] 
+    INNER JOIN (
+        (
+            (viewpolhist 
+                INNER JOIN stlstviewnew 
+                ON  polhist_td0td0_pol_nr = stlst_td0td0_pol_nr  
+                AND polhist_td0td0_zust_c = stlst_td0td0_zust_c  
+                AND polhist_td0td0_lf_nr  = stlst_td0td0_lf_nr   
+                AND polhist_stat_c        = stlst_stat_c        
+            ) 
+            INNER JOIN objektviewnew 
+            ON  stlst_td0td0_pol_nr  = obj_vertrag_nr      
+            AND stlst_td0td0_zust_c = obj_vertrag_zust_c  
+            AND stlst_td0td0_lf_nr  = obj_vertrag_lf_nr   
+            AND stlst_t18t18_id_nr  = obj_t18_id_nr       
+            AND stlst_lf_nr         = obj_tc0tc0_lf_nr   
+        ) 
+        INNER JOIN attibutviewnew 
+        ON obj_id_nr = mrk_tg0tg0_id_nr
+    ) 
+    ON   [ktg mapping defintionen].t18_id_nr = mrk_t18_id_nr     
+    AND  [ktg mapping defintionen].t20_id_nr = mrk_t20t20_id_nr  
+    AND  [ktg mapping defintionen].t30_r     = mrk_abh_rol_c     
+    AND  [ktg mapping defintionen].t19_id_nr = mrk_t19t19_id_nr 
+WHERE 
+   ( polhist_td0td0_pol_nr  = 14093188 ) 
+   AND stlst_glt_ab  <= polhist_glt_ab  
+   AND stlst_glt_bis >= polhist_glt_ab  
+   AND stlst_erf_am  <= polhist_erf_am  
+   AND stlst_ers_am  >  polhist_erf_am  
+   AND obj_glt_ab   <= polhist_glt_ab  
+   AND obj_glt_bis  >= polhist_glt_ab  
+   AND obj_erf_am   <= polhist_erf_am  
+   AND obj_ers_am   >  polhist_erf_am  
+   AND mrk_glt_ab  <= polhist_glt_ab  
+   AND mrk_glt_bis >= polhist_glt_ab  
+   AND mrk_erf_am  <= polhist_erf_am  
+   AND mrk_ers_am  >  polhist_erf_am  
+; 
+*/
+
+// Drop tables if they are still in memory, as we will load them from QVD below
+
+WHEN Alt(TableNumber('PolHist'), -1) > -1     DROP TABLE PolHist;
+WHEN Alt(TableNumber('STLST'), -1) > -1       DROP TABLE STLST;
+WHEN Alt(TableNumber('Objekte'), -1) > -1     DROP TABLE Objekte;
+WHEN Alt(TableNumber('Attribute'), -1) > -1   DROP TABLE Attribute;
+WHEN Alt(TableNumber('Result'), -1) > -1      DROP TABLE Result;
+
+PolHist:
+LOAD * FROM [$(vTempFolder)/~PolHist.qvd] (qvd);
+
+// ---------------------------------------------------------------------
+CALL RowsColsRemember('PolHist');
+CALL StartClock(9,'QlikJoin','Qlik joining PolHist with STLST','PolHist_STLST');
+
+INNER JOIN (PolHist)
+LOAD * FROM [$(vTempFolder)/~STLST.qvd] (qvd) WHERE Exists(%PolHist_STLST);
+CALL RowsColsCompare ('PolHist', QvdNoOfFields('$(vTempFolder)/~STLST.qvd')-1, '*');
+RENAME TABLE PolHist TO [~PolHist_STLST];
+
+PolHist_STLST:
+NOCONCATENATE LOAD * RESIDENT [~PolHist_STLST]
+WHERE  
+       STLST_GLT_AB  <= PolHist_GLT_AB  
+   AND STLST_GLT_BIS >= PolHist_GLT_AB 
+   AND STLST_ERF_AM  <= PolHist_ERF_AM  
+   AND STLST_ERS_AM  >  PolHist_ERF_AM;
+DROP TABLE [~PolHist_STLST];
+CALL StopClock;
+
+// ---------------------------------------------------------------------
+CALL RowsColsRemember('PolHist_STLST');
+CALL StartClock(10,'QlikJoin','Qlik joining PolHist_STLST with Objekte','PolHist_STLST_Obj');
+
+INNER JOIN (PolHist_STLST)
+LOAD * FROM [$(vTempFolder)/~Objekte.qvd] (qvd) WHERE Exists(%STLST_Objekte);
+CALL RowsColsCompare ('PolHist_STLST', QvdNoOfFields('$(vTempFolder)/~Objekte.qvd')-1, '*');
+RENAME TABLE PolHist_STLST TO [~PolHist_STLST_Obj];
+
+PolHist_STLST_Obj:
+NOCONCATENATE LOAD * RESIDENT [~PolHist_STLST_Obj]
+WHERE  
+       Obj_GLT_AB  <= PolHist_GLT_AB  
+   AND Obj_GLT_BIS >= PolHist_GLT_AB 
+   AND Obj_ERF_AM  <= PolHist_ERF_AM  
+   AND Obj_ERS_AM  >  PolHist_ERF_AM;
+DROP TABLE [~PolHist_STLST_Obj];
+CALL StopClock;
+
+// ---------------------------------------------------------------------
+CALL RowsColsRemember('PolHist_STLST_Obj');
+CALL StartClock(11,'QlikJoin','Qlik joining PolHist_STLST_Objekte with Attribute','PolHist_STLST_Obj_Attr');
+
+INNER JOIN (PolHist_STLST_Obj)
+LOAD * FROM [$(vTempFolder)/~Attribute.qvd] (qvd) WHERE Exists(%Objekte_Attribute);
+CALL RowsColsCompare ('PolHist_STLST_Obj', QvdNoOfFields('$(vTempFolder)/~Attribute.qvd')-1, '*');
+RENAME TABLE PolHist_STLST_Obj TO [~PolHist_STLST_Obj_Attr];
+
+PolHist_STLST_Obj_Attr:
+NOCONCATENATE LOAD * RESIDENT [~PolHist_STLST_Obj_Attr]
+WHERE  
+       MRK_GLT_AB  <= PolHist_GLT_AB  
+   AND MRK_GLT_BIS >= PolHist_GLT_AB 
+   AND MRK_ERF_AM  <= PolHist_ERF_AM  
+   AND MRK_ERS_AM  >  PolHist_ERF_AM;
+DROP TABLE [~PolHist_STLST_Obj_Attr];
+CALL StopClock;
+//SET vKeyField = POL_NR &' | '& ZUST_C &' | '& LF_NR &' | '& GLT_AB &' | '& GLT_BIS &' | '& ERF_AM  AS $Key;
+
+
+LET vStoreFile = '$(vExportFolder)/Result_$(vMode)$(vT18_ID_NR)_part' & Num(vLoop,'0000') & '.qvd';
+
+DROP FIELDS %PolHist_STLST, %STLST_Objekte, %Objekte_Attribute FROM PolHist_STLST_Obj_Attr;
+STORE PolHist_STLST_Obj_Attr INTO [$(vStoreFile)] (qvd);
+DROP TABLE PolHist_STLST_Obj_Attr;
+
+LET vInvolvedFiles = vInvolvedFiles & CHR(10) & If(vLoop=1,'Result: NOCONCATENATE ', 'CONCATENATE (Result) ') 
+	& 'LOAD $PolHistKey, PolHist_TD0TD0_POL_NR AS POL_NR FROM [$(vStoreFile)] (qvd);';
+
+// DROP TABLE PolHist_STLST_Obj_Attr_KTG;
+
+LET v = '$(vLoopInfo) New Result rows: ' & NoOfRows('Result');

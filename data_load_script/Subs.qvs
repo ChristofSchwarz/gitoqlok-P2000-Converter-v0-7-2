@@ -1,0 +1,90 @@
+///$tab Subs
+    
+LET vColsCheck1 = '';
+LET vRowsCheck1 = '';
+LET vColsCheck2 = '';
+LET vRowsCheck2 = '';
+
+
+SUB StartClock(param_id, param_type, param_msg, param_table)
+	TRACE $(vLoopInfo) $(param_type) $(param_id): $(param_msg);
+    IF Alt(TableNumber('~tmpLog'), -1) > -1 THEN
+    	TRACE *** New StartClock is called before StopClock ***;
+        DROP TABLE [~tmpLog];
+    END IF
+    [~tmpLog]: 
+    NOCONCATENATE LOAD 
+    	DocumentName() AS log.appid, 
+        '$(vStartScript)' AS log.scriptstart, 
+        TimeStamp(Now(), 'YYYY-MM-DD hh.mm.ss') AS log.time,
+        $(vLoop) AS log.loop,
+        '$(param_id)' AS log.stepid,
+        '$(param_type)' AS log.type,
+        '$(param_msg)' AS log.msg,
+        '$(param_table)' AS log.table,
+        Alt(NoOfRows('$(param_table)'), 0) AS log.recsBefore,
+        '$(vT18_ID_NR)' AS log.t18_id_nr
+    AUTOGENERATE(1);
+END SUB
+
+SUB StopClock
+	LET priv_StopWatchCount = Num(Round(24*3600*(Now() - Peek('log.time',-1,'~tmpLog')),.1), '', '.', ' ');
+    LET priv_RecordCount = NoOfRows(Peek('log.table',-1,'~tmpLog')) - Peek('log.recsBefore',-1,'~tmpLog');
+    TRACE added $(priv_RecordCount) in $(priv_StopWatchCount) seconds;
+    CONCATENATE (log) 
+    LOAD *, $(priv_StopWatchCount) AS log.duration, $(priv_RecordCount) AS log.records
+    RESIDENT [~tmpLog];
+    DROP FIELD log.recsBefore FROM log;
+    DROP TABLE [~tmpLog];
+    LET priv_StopWatchCount = Null();
+    LET priv_RecordCount = Null();
+END SUB
+
+SUB RowsColsRemember(param_table);
+	IF Alt(TableNumber(param_table),-1) = -1 THEN
+    	[Error: No such table "$(param_table)"];
+    END IF
+	LET vColsCheck1 = Num(NoOfFields(param_table));
+	LET vRowsCheck1 = Num(NoOfRows(param_table));
+END SUB
+
+
+SUB RowsColsCompare (param_table, param_moreCols, param_RowsCompare);
+	IF Alt(TableNumber(param_table),-1) = -1 THEN
+    	[Error: No such table "$(param_table)"];
+    END IF
+	LET vColsCheck2 = Num(NoOfFields(param_table));
+	LET vRowsCheck2 = Num(NoOfRows(param_table));
+    TRACE `
+$(param_table): expecting $(param_moreCols) more columns
+$(vColsCheck1) columns, $(vRowsCheck1) rows
+$(vColsCheck2) columns, $(vRowsCheck2) rows`;	
+    IF vColsCheck2-vColsCheck1 <> param_moreCols THEN
+    	[Error: Table "$(param_table)" has now an unexpected no of columns];
+    END IF
+    SWITCH param_RowsCompare
+    CASE '='
+    	IF NOT vRowsCheck2 = vRowsCheck1 THEN
+            [Error: Table "$(param_table)" has unexpected no of rows.];
+        END IF
+    CASE '<'
+    	IF NOT vRowsCheck2 < vRowsCheck1 THEN
+            [Error: Table "$(param_table)" has unexpected no of rows.];
+        END IF
+    CASE '<='
+    	IF NOT vRowsCheck2 <= vRowsCheck1 THEN
+            [Error: Table "$(param_table)" has unexpected no of rows.];
+        END IF
+    CASE '>'
+    	IF NOT vRowsCheck2 > vRowsCheck1 THEN
+            [Error: Table "$(param_table)" has unexpected no of rows.];
+        END IF
+    CASE '>='
+    	IF NOT vRowsCheck2 >= vRowsCheck1 THEN
+            [Error: Table "$(param_table)" has unexpected no of rows.];
+        END IF    
+    CASE '*'
+    DEFAULT
+        [Error: Unknown 3rd argument in SUB RowsColsCompare "$(param_RowsCompare)".];
+    END SWITCH
+END SUB

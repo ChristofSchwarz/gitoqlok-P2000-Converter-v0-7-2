@@ -1,0 +1,48 @@
+///$tab 1: Policy History
+// Vertrags History
+// Weil wir auf TF4TEC Tabelle kein Gültig bis Datum haben müssen wir ebenfalls die TF2HD0 Tabelle lesen
+CALL StartClock(1,'Query','PolHist (Policy History, join of TF4TEC and TF2HD0)', 'PolHist');
+PolHist:
+LOAD *, 
+	$(%PolHist_STLST in PolHist),
+    PolHist_TD0TD0_POL_NR &' | '& PolHist_TD0TD0_ZUST_C &' | '& PolHist_TD0TD0_LF_NR &' | '& PolHist_GLT_AB 
+    	&' | '& PolHist_GLT_BIS &' | '& PolHist_ERF_AM AS $PolHistKey;
+SELECT
+    TF2HD0.GLT_AB         AS PolHist_GLT_AB
+   ,TF2HD0.GLT_BIS        AS PolHist_GLT_BIS
+   ,TF2HD0.ERF_AM         AS PolHist_ERF_AM
+   ,TF2HD0.ERS_AM         AS PolHist_ERS_AM
+   ,TF2HD0.STAT_C         AS PolHist_STAT_C
+   ,TF2HD0.GSFTV_STAT_C   AS PolHist_GSFTV_STAT_C
+   ,TF2HD0.BEN_ID         AS PolHist_BEN_ID
+   ,TF2HD0.TD0TD0_LF_NR   AS PolHist_TD0TD0_LF_NR
+   ,TF2HD0.TD0TD0_ZUST_C  AS PolHist_TD0TD0_ZUST_C
+   ,TF2HD0.TD0TD0_POL_NR  AS PolHist_TD0TD0_POL_NR
+   ,TF2HD0.T31T31_ID_NR   AS PolHist_T31T31_ID_NR
+   ,TF2HD0.BEN_ID_BARB    AS PolHist_BEN_ID_BARB
+   ,TF2HD0.H18_ERF_AM     AS PolHist_H18_ERF_AM
+   
+   ,TF4TEC.AVB_VERSION    AS PolHist_AVB_VERSION
+   ,TF4TEC.PBNR           AS PolHist_PBNR
+   ,TF4TEC.VKST_NR        AS PolHist_VKST_NR
+   ,TF4TEC.ABL_DAT        AS PolHist_ABL_DAT
+   ,TF4TEC.T18T18_ID_NR   AS PolHist_T18T18_ID_NR
+
+FROM
+    /* TF4TEC ca 10 M records : Interface Tabelle */ 
+    $(vDBSchema).TF4TEC AS TF4TEC
+INNER JOIN
+    /* from TF2HD0 ca 25 M records : Vertrags History Tabelle */
+    $(vDBSchema).TF2HD0 AS TF2HD0
+ON
+        TF4TEC.TD0_POL_NR = TF2HD0.TD0TD0_POL_NR 
+    AND TF4TEC.TD0_ZUST_C = TF2HD0.TD0TD0_ZUST_C
+    AND TF4TEC.TD0_LF_NR  = TF2HD0.TD0TD0_LF_NR
+    AND TF4TEC.GLT_AB     = TF2HD0.GLT_AB
+    AND TF4TEC.ERF_AM     = TF2HD0.ERF_AM
+WHERE
+    TF4TEC.TD0_POL_NR IN ($(vPOL_NRs))
+;
+CALL StopClock;
+STORE PolHist INTO [$(vTempFolder)/~PolHist.qvd] (qvd);
+DROP TABLE PolHist;

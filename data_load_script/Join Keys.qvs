@@ -1,0 +1,74 @@
+///$tab Join Keys
+// This is to get readable combinded keys with | as separator between the field values
+// SET vConcatPrefix = "(";
+// SET vConcatSep    = " & '|' & ";
+// SET vConcatSuffix = ")";
+
+// This is to get a Hash code of the combination of keys, not readable but fast
+SET vConcatPrefix = "Hash256(";
+SET vConcatSep    = ", ";
+SET vConcatSuffix = ")";
+
+// ------------ Config of joins done in Qlik ------------
+// put a pair of fields, this will lead to a concatenated key field
+// over which a join can be performed between two tables (when loading Result)
+
+$config1:
+LOAD RecNo() AS Row,  
+	If(Len(@1),@1,Peek('LeftTable'))  AS LeftTable,
+    If(Len(@2),@2,Peek('RightTable')) AS RightTable,
+    If(Len(@3),@3)                    AS LeftField,
+    If(Len(@4),@4)                    AS RightField
+INLINE [
+// below is the config
+
+PolHist = STLST
+	== PolHist_TD0TD0_POL_NR = STLST_TD0TD0_POL_NR
+    == PolHist_TD0TD0_ZUST_C = STLST_TD0TD0_ZUST_C
+    == PolHist_TD0TD0_LF_NR  = STLST_TD0TD0_LF_NR 
+    == PolHist_STAT_C        = STLST_STAT_C
+
+STLST = Objekte
+	== STLST_TD0TD0_POL_NR = Obj_Vertrag_NR
+    == STLST_TD0TD0_ZUST_C = Obj_Vertrag_ZUST_C
+    == STLST_TD0TD0_LF_NR  = Obj_Vertrag_LF_NR 
+    == STLST_T18T18_ID_NR  = Obj_T18_ID_NR
+    == STLST_LF_NR         = Obj_TC0TC0_LF_NR
+
+Objekte = Attribute
+    == Obj_ID_NR = MRK_TG0TG0_ID_NR
+
+Attribute = KTG Mapping
+	== MRK_T18_ID_NR    = T18_ID_NR
+    == MRK_T20T20_ID_NR = T20_ID_NR 
+    == MRK_ABH_ROL_C    = T30_R 
+    == MRK_T19T19_ID_NR = T19_ID_NR
+
+] (no labels, delimiter is '=')
+WHERE NOT @1 LIKE '//';
+
+
+$config2:
+LOAD 
+	LeftTable, RightTable,
+	'$(vConcatPrefix)' & Concat(LeftField, '$(vConcatSep)', Row) & '$(vConcatSuffix)' AS LeftFields,
+    '$(vConcatPrefix)' & Concat(RightField,'$(vConcatSep)', Row) & '$(vConcatSuffix)' AS RightFields
+RESIDENT
+	$config1
+WHERE 
+	Len(LeftField) AND Len(RightField)
+GROUP BY
+    LeftTable, RightTable;
+
+DROP TABLE $config1;
+
+FOR v = 1 TO NoOfRows('$config2');
+	LET vLeftTable   = Peek('LeftTable',   v-1, '$config2');
+	LET vRightTable  = Peek('RightTable',  v-1, '$config2');   
+    TRACE Creating concatenated key for $(vLeftTable) - $(vRightTable):
+"%$(vLeftTable)_$(vRightTable) in $(vLeftTable)" 
+"%$(vLeftTable)_$(vRightTable) in $(vRightTable)";
+    LET [%$(vLeftTable)_$(vRightTable) in $(vLeftTable)] = Peek('LeftFields',  v-1, '$config2') & ' AS [%$(vLeftTable)_$(vRightTable)]';
+    LET [%$(vLeftTable)_$(vRightTable) in $(vRightTable)] = Peek('RightFields',  v-1, '$config2')& ' AS [%$(vLeftTable)_$(vRightTable)]';
+NEXT v;
+DROP TABLE $config2;

@@ -1,0 +1,43 @@
+///$tab 2: STLST 1 (Vertrag)
+// P2000 Vertrag
+CALL StartClock(2,'Query','STLST (Stückliste Vertrag, TF4TEC and TF2HD0)','STLST');
+
+STLST:
+LOAD *
+   ,2 AS $Query_STLST
+   ,$(%PolHist_STLST in STLST)
+   ,$(%STLST_Objekte in STLST);        
+SELECT
+    TF2HD0.GLT_AB         AS STLST_GLT_AB
+   ,TF2HD0.GLT_BIS        AS STLST_GLT_BIS
+   ,TF2HD0.ERF_AM         AS STLST_ERF_AM
+   ,TF2HD0.ERS_AM         AS STLST_ERS_AM  
+   ,TF2HD0.STAT_C         AS STLST_STAT_C
+   ,TF2HD0.GSFTV_STAT_C   AS STLST_GSFTV_STAT_C
+   ,TF2HD0.BEN_ID         AS STLST_BEN_ID
+   ,TF2HD0.TD0TD0_POL_NR  AS STLST_TD0TD0_POL_NR
+   ,TF2HD0.TD0TD0_ZUST_C  AS STLST_TD0TD0_ZUST_C
+   ,TF2HD0.TD0TD0_LF_NR   AS STLST_TD0TD0_LF_NR
+   ,TF4TEC.T18T18_ID_NR   AS STLST_T18T18_ID_NR
+   ,0                     AS STLST_LF_NR
+   //,TF2HD0.TD0TD0_LF_NR   AS STLST_LF_NR
+   ,TF2HD0.T31T31_ID_NR   AS STLST_T31T31_ID_NR
+   ,TF4TEC.T18T18_ID_NR   AS STLST_BezT18_ID_NR
+   ,0                     AS STLST_Bez_LF_NR
+FROM
+	/* TF4TEC ca 10 M records : Interface Tabelle */ 
+    $(vDBSchema).TF4TEC AS TF4TEC
+INNER JOIN
+    /* TF2HD0 ca 25 M records : Vertrags History Tabelle */
+    $(vDBSchema).TF2HD0 AS TF2HD0
+    ON
+            TF4TEC.TD0_POL_NR = TF2HD0.TD0TD0_POL_NR  
+        AND TF4TEC.TD0_ZUST_C = TF2HD0.TD0TD0_ZUST_C  
+        AND TF4TEC.TD0_LF_NR  = TF2HD0.TD0TD0_LF_NR  
+        AND TF4TEC.GLT_AB     = TF2HD0.GLT_AB  
+        AND TF4TEC.ERF_AM     = TF2HD0.ERF_AM
+WHERE  
+	TF4TEC.TD0_POL_NR IN ($(vPOL_NRs))
+;
+
+CALL StopClock;

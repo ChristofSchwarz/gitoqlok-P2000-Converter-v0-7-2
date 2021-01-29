@@ -1,0 +1,273 @@
+[
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Field",
+    "qCardinal": 17,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$FieldNo",
+    "qCardinal": 11,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Fields",
+    "qCardinal": 3,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Info",
+    "qCardinal": 1,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "$PolHistKey",
+    "qCardinal": 931127,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Result"
+    ]
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Rows",
+    "qCardinal": 4,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Table",
+    "qCardinal": 4,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "$aggr_POL_NR_count",
+    "qCardinal": 352,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "PolicesGrp"
+    ]
+  },
+  {
+    "qName": "$pol_group",
+    "qCardinal": 352,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "PolicesGrp",
+      "Link"
+    ]
+  },
+  {
+    "qName": "POL_NR",
+    "qCardinal": 105394,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Result",
+      "Link"
+    ]
+  },
+  {
+    "qName": "POL_NR_List",
+    "qCardinal": 352,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "PolicesGrp"
+    ]
+  },
+  {
+    "qName": "POL_NR_exists",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Link"
+    ]
+  },
+  {
+    "qName": "log.appid",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.duration",
+    "qCardinal": 52,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.loop",
+    "qCardinal": 352,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.msg",
+    "qCardinal": 11,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.records",
+    "qCardinal": 3259,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.scriptstart",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.stepid",
+    "qCardinal": 11,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.t18_id_nr",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.table",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.time",
+    "qCardinal": 3247,
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  },
+  {
+    "qName": "log.type",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "log"
+    ]
+  }
+]

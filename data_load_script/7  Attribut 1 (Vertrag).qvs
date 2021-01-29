@@ -1,0 +1,46 @@
+///$tab 7: Attribut 1 (Vertrag)
+// Attribute aus Vertrag
+CALL StartClock(7,'Query','Attribute aus Vertrag, TF2TG0 and TF2TG1','Attribute');
+
+Attribute:
+LOAD *
+   ,7 AS $Query_MRK
+   ,$(%Objekte_Attribute in Attribute)   
+   ,$(%Attribute_KTG Mapping in Attribute)
+   ,Text(MRK_UNIV_WERT_tmp) AS MRK_UNIV_WERT;
+SELECT   
+    TF2TG0.ID_NR            AS MRK_ID_NR
+   ,TF2TG0.KL_C             AS MRK_KL_C
+   ,TF2TG0.ABH_ROL_C        AS MRK_ABH_ROL_C
+   ,TF2TG0.DMY              AS MRK_DMY
+   ,TF2TG0.FKT_C            AS MRK_FKT_C
+   ,TF2TG0.FKT_NR           AS MRK_FKT_NR
+   ,TF2TG0.T20T20_ID_NR     AS MRK_T20T20_ID_NR
+   ,TF2TG0.TD0TD0_POL_NR    AS MRK_VT_POL_NR
+   ,TF2TG0.TD0TD0_ZUST_C    AS MRK_VT_ZUST_C
+   ,TF2TG0.TD0TD0_LF_NR     AS MRK_VT_LF_NR
+   ,$(vT18_ID_NR)           AS MRK_T18_ID_NR
+   ,0                       AS MRK_TC0TC0_LF_NR
+   ,TF2TG0.TZ0TZ0_ID_NR     AS MRK_TZ0TZ0_ID_NR
+   ,TF2TG0.LF_NR            AS MRK_LF_NR
+   ,TF2TG0.TZ0_ID_NR        AS MRK_TZ0_ID_NR
+   ,TF2TG1.GLT_AB           AS MRK_GLT_AB
+   ,TF2TG1.GLT_BIS          AS MRK_GLT_BIS
+   ,TF2TG1.ERF_AM           AS MRK_ERF_AM
+   ,TF2TG1.ERS_AM           AS MRK_ERS_AM
+   ,TF2TG1.UNIV_WERT        AS MRK_UNIV_WERT_tmp
+   ,TF2TG1.LOE_C            AS MRK_LOE_C
+   ,TF2TG1.TG0TG0_ID_NR     AS MRK_TG0TG0_ID_NR
+   ,TF2TG1.T19T19_ID_NR     AS MRK_T19T19_ID_NR
+FROM   
+    /* TF2TG0 ca 122 M records : Objekt Tabelle */
+    $(vDBSchema).TF2TG0 AS TF2TG0 
+INNER JOIN   
+    /* TF2TG1 ca 1.1 Bill records : Attribut Tabelle */
+    $(vDBSchema).TF2TG1 AS TF2TG1  
+ON 
+    TF2TG0.ID_NR = TF2TG1.TG0TG0_ID_NR
+WHERE   
+    TF2TG0.TD0TD0_POL_NR in ($(vPOL_NRs))
+;
+CALL StopClock;

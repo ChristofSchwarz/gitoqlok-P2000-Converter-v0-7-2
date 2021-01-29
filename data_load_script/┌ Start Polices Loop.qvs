@@ -1,0 +1,44 @@
+///$tab ┌ Start Polices Loop
+PolicesGrp:
+LOAD
+	$pol_group,
+	Concat(POL_NR, ',', POL_NR) AS POL_NR_List,
+    RangeSum(Count(POL_NR), Peek('$aggr_POL_NR_count')) AS $aggr_POL_NR_count 
+GROUP BY
+	$pol_group;
+LOAD 
+	1 + Floor(RecNo()-1, $(vGroupSize)) / $(vGroupSize) AS $pol_group, 
+	POL_NR;
+
+IF vTestMode THEN
+	LET vMode = 'TEST_';
+    // Load an exploded table based on variable vTest_POL_NRs
+	LOAD Trim(SubField('$(vTest_POL_NRs)', ',')) AS POL_NR AUTOGENERATE(1);
+ELSE
+	LET vMode = '';
+    SELECT DISTINCT
+        TD0_POL_NR AS POL_NR
+    FROM
+        $(vDBSchema).TF4TEC
+    WHERE
+      T18T18_ID_NR = $(vT18_ID_NR) //10679
+    ORDER BY
+      TD0_POL_NR;
+END IF
+
+LET v = Peek('$aggr_POL_NR_count', -1, 'PolicesGrp') & ' POL_NR found, ' & FieldValueCount('$pol_group') & ' groups with $(vGroupSize) each';
+TRACE $(v);
+
+
+// Define empty "log" table
+log: 
+LOAD * INLINE 
+[log.appid, log.scriptstart, log.stepid, log.type, log.msg, log.table, log.duration, log.records, log.t18_id_nr]; 
+
+LET vInvolvedFiles = '';
+FOR vLoop = 1 TO NoOfRows('PolicesGrp');
+
+	LET vPOL_NRs = Peek('POL_NR_List', vLoop-1, 'PolicesGrp');
+    LET vLoopInfo = '$(vMode)Loop $(vLoop)/' & NoOfRows('PolicesGrp') & ' '; 
+    LET vLoopStart = TimeStamp(Now(),'YYYY-MM-DD hh.mm.ss');
+    TRACE $(vLoopInfo)This time: POL_NR in ($(vPOL_NRs));

@@ -1,0 +1,29 @@
+///$tab └ End Loop
+   // Start of loop is in script section "┌ Start Polices Loop"
+   
+   // store log after each loop
+   LET vLoopDuration = Num(Round(24*3600*(Now() - vLoopStart),.1), '', '.', ' ');
+   TRACE Loop $(vLoop) took $(vLoopDuration) seconds ...;
+   
+   STORE log INTO [$(vExportFolder)/log_$(vStartScript).txt] (txt, delimiter is '\t');
+   
+NEXT vLoop
+
+
+TRACE `Now loading:
+$(vInvolvedFiles)
+`;
+
+// Load all involved files
+$(vInvolvedFiles);
+
+
+POL_NR_exists: MAPPING LOAD DISTINCT POL_NR, 1 RESIDENT Result;
+
+Link:
+LOAD *, ApplyMap('POL_NR_exists', POL_NR, 0) AS POL_NR_exists;
+LOAD 
+	$pol_group,
+	SubField(POL_NR_List,',') AS POL_NR
+RESIDENT
+	PolicesGrp;

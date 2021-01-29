@@ -1,0 +1,106 @@
+[
+  {
+    "qInfo": {
+      "qId": "c90d6d4e-9bd1-41b7-9faf-3bfb66cab3d0",
+      "qType": "bookmark"
+    },
+    "qMetaDef": {
+      "title": "Bookmark1",
+      "description": ""
+    },
+    "creationDate": "2020-12-15T15:56:46.482Z",
+    "sheetId": "047f9c6c-dd9d-469c-b0db-757daa38adbd",
+    "selectionFields": "1aLV1STLSTVertrag.TD0TD0_LF_NR, TF2TG0.TD0TD0_ZUST_C, TF2TG0.TD0TD0_POL_NR, TF2HG0.TG0TG0_ID_NR",
+    "qData": {
+      "qBookMark": {
+        "qStateData": [
+          {
+            "qStateName": "$",
+            "qFieldItems": [
+              {
+                "qDef": {
+                  "qName": "1aLV1STLSTVertrag.TD0TD0_LF_NR",
+                  "qType": "NOT_PRESENT"
+                },
+                "qSelectInfo": {
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              },
+              {
+                "qDef": {
+                  "qName": "TF2TG0.TD0TD0_ZUST_C",
+                  "qType": "NOT_PRESENT"
+                },
+                "qSelectInfo": {
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              },
+              {
+                "qDef": {
+                  "qName": "TF2TG0.TD0TD0_POL_NR",
+                  "qType": "NOT_PRESENT"
+                },
+                "qSelectInfo": {
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              },
+              {
+                "qDef": {
+                  "qName": "TF2HG0.TG0TG0_ID_NR",
+                  "qType": "NOT_PRESENT"
+                },
+                "qSelectInfo": {
+                  "qTextSearch": "(341942875|341942876|341942877|341942878|341942879|341942880|341942881|341942882|341942883|341942884|341942885|341942886|341942887|341942888|341942889|341942896|341942972|341942973|341942974|341942975|341942976|341942979|341943081|341943082|341943083|342066266)",
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              }
+            ]
+          }
+        ],
+        "qUtcModifyTime": 44180.706087962964,
+        "qVariableItems": [],
+        "qPatches": []
+      }
+    }
+  }
+]
