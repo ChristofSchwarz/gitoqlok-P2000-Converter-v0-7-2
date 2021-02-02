@@ -38,11 +38,11 @@ STLST = Objekte
 Objekte = Attribute
     == Obj_ID_NR = MRK_TG0TG0_ID_NR
 
-Attribute = KTG Mapping
-	== MRK_T18_ID_NR    = T18_ID_NR
-    == MRK_T20T20_ID_NR = T20_ID_NR 
-    == MRK_ABH_ROL_C    = T30_R 
-    == MRK_T19T19_ID_NR = T19_ID_NR
+// Attribute = KTG Mapping
+// 	== MRK_T18_ID_NR    = T18_ID_NR
+//     == MRK_T20T20_ID_NR = T20_ID_NR 
+//     == MRK_ABH_ROL_C    = T30_R 
+//     == MRK_T19T19_ID_NR = T19_ID_NR
 
 ] (no labels, delimiter is '=')
 WHERE NOT @1 LIKE '//';

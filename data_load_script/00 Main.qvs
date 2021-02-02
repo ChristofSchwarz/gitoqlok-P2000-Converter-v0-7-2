@@ -23,29 +23,4 @@ LET vTempFolder= 'lib://19.P2000/5.Import';
 LET vExportFolder= 'lib://19.P2000/4.Export';
 LET vStartScript = TimeStamp(Now(),'YYYY-MM-DD hh.mm.ss');
 
-LET vGroupSize = 300;  // How many Polices should we transform at once
-//LET vT18_ID_NR = 10998; // 10679 "KTG" or 10998 "B77"
-LET vT18_ID_NR = 10679; // 10679 "KTG" or 10998 "B77"
-LET vTestMode = 0;
-SET vTest_POL_NRs = 15898853; //15898238;  
-//SET vTest_POL_NRs = 14093597,14094531,14096549,14097518;
-
-
-LIB CONNECT TO 'P2000 Mainframe';
 SET vDBSchema = CHZIS1_P2000.P2000;
-
-/*
-TF2TD0     1 M records : Vertrags Tabelle   (not used)
-TF2HD0    25 M records : Vertrags History Tabelle
-TF2TC0     6 M records : Produkt Tabelle    (not used)
-TF2HC0    55 M records : Produkt History Tabelle
-TF2TC2     4 M records : Produkt Beziehungen
-TF2TG0   122 M records : Objekt Tabelle
-TF2HG0   448 M records : Objekt History Tabelle
-TF2TG1  1086 M records : Attribut Tabelle
-TF4TEC    10 M records : Interface Tabelle
-
-More details:
-https://zurichinsurance.sharepoint.com/:x:/r/sites/PCTransformation/_layouts/15/Doc.aspx?sourcedoc=%7B6736409B-A794-4A9D-ABDE-E1ACBB2FC0E3%7D&file=P2000%20Tabellen%20Beschreibung.xlsx&action=default&mobileredirect=true
-
-*/

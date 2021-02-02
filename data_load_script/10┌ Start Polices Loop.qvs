@@ -1,4 +1,22 @@
 ///$tab 10┌ Start Polices Loop
+LIB CONNECT TO 'P2000 Mainframe';
+
+/*
+TF2TD0     1 M records : Vertrags Tabelle   (not used)
+TF2HD0    25 M records : Vertrags History Tabelle
+TF2TC0     6 M records : Produkt Tabelle    (not used)
+TF2HC0    55 M records : Produkt History Tabelle
+TF2TC2     4 M records : Produkt Beziehungen
+TF2TG0   122 M records : Objekt Tabelle
+TF2HG0   448 M records : Objekt History Tabelle
+TF2TG1  1086 M records : Attribut Tabelle
+TF4TEC    10 M records : Interface Tabelle
+
+More details:
+https://zurichinsurance.sharepoint.com/:x:/r/sites/PCTransformation/_layouts/15/Doc.aspx?sourcedoc=%7B6736409B-A794-4A9D-ABDE-E1ACBB2FC0E3%7D&file=P2000%20Tabellen%20Beschreibung.xlsx&action=default&mobileredirect=true
+
+*/
+
 PolicesGrp:
 LOAD
 	$pol_group,

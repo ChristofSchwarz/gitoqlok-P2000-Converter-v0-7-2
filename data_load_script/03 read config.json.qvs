@@ -1,0 +1,68 @@
+///$tab 03 read config.json
+// Get settings from here https://deawa07394.zurich.com/dev-hub/extension-editor/#qext{p2000-settings}
+
+LIB CONNECT TO 'p2000-settings (gitdir_christof.schwarz)';
+RestConnectorMasterTable:
+SQL SELECT 
+	"appid", 
+    "t18_id_nr",
+    "groupSize",
+	"testMode",
+	"__KEY_root",
+	(SELECT 
+		"@Value",
+		"__FK_testPolNr"
+	FROM "testPolNr" FK "__FK_testPolNr" ArrayValueAlias "@Value")
+FROM JSON (wrap on) "root" PK "__KEY_root";
+
+
+[config.json]:
+LOAD 
+	appid, t18_id_nr, testMode, groupSize, __KEY_root
+RESIDENT 
+	RestConnectorMasterTable
+WHERE 
+	NOT IsNull([__KEY_root]) AND appid LIKE DocumentName();
+
+IF NoOfRows('settings')=0 THEN
+	LET v = Lower(DocumentName());
+	`Error: No Settings for this app. Make a Json entry like the one below for this app at: 
+https://deawa07394.zurich.com/dev-hub/extension-editor/#qext{p2000-settings}
+{
+  "appid": "$(v)",
+  "t18_id_nr": 10679,
+  "groupSize": 300,
+  "testMode": true/false,
+  "testPolNr": [14093597,14094531,14096549,14097518]
+}
+`;
+END IF
+
+LEFT JOIN (config.json)
+LOAD
+// JOIN ON
+    __FK_testPolNr AS __KEY_root,
+// Add field
+    Concat(@Value, ',') AS polNrs
+RESIDENT 
+	RestConnectorMasterTable
+WHERE 
+	NOT IsNull([__FK_testPolNr])
+GROUP BY
+    __FK_testPolNr;
+
+DROP TABLE RestConnectorMasterTable;
+
+LET vGroupSize    = Peek('groupSize',-1,'config.json');  // How many Polices should we transform at once
+LET vT18_ID_NR    = Peek('t18_id_nr',-1,'config.json'); // 10679 "KTG" or 10998 "B77"
+LET vTestMode     = If(Peek('testMode',-1,'config.json') LIKE 'true', 1, 0);
+LET vTest_POL_NRs = Peek('polNrs',-1,'config.json');
+
+TRACE `Settings found in config.json:
+ vGroupSize    : $(vGroupSize)
+ vT18_ID_NR    : $(vT18_ID_NR)
+ vTestMode     : $(vTestMode)
+ vTest_POL_NRs : $(vTest_POL_NRs)
+`;
+
+DROP TABLE config.json;

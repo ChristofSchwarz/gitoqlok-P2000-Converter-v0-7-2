@@ -3,13 +3,13 @@
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$Field",
-    "qCardinal": 17,
+    "qCardinal": 6,
     "qTags": [
       "$hidden",
       "$system",
+      "$key",
       "$ascii",
-      "$text",
-      "$key"
+      "$text"
     ],
     "qSrcTables": []
   },
@@ -17,7 +17,7 @@
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$FieldNo",
-    "qCardinal": 11,
+    "qCardinal": 4,
     "qTags": [
       "$hidden",
       "$system",
@@ -53,21 +53,10 @@
     "qSrcTables": []
   },
   {
-    "qName": "$PolHistKey",
-    "qCardinal": 931127,
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "Result"
-    ]
-  },
-  {
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$Rows",
-    "qCardinal": 4,
+    "qCardinal": 3,
     "qTags": [
       "$hidden",
       "$system",
@@ -80,194 +69,79 @@
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$Table",
-    "qCardinal": 4,
+    "qCardinal": 3,
     "qTags": [
       "$hidden",
       "$system",
+      "$key",
       "$ascii",
-      "$text",
-      "$key"
+      "$text"
     ],
     "qSrcTables": []
   },
   {
-    "qName": "$aggr_POL_NR_count",
-    "qCardinal": 352,
+    "qName": "PolNr",
+    "qCardinal": 4,
     "qTags": [
       "$numeric",
       "$integer"
     ],
     "qSrcTables": [
-      "PolicesGrp"
+      "testPolNr"
     ]
   },
   {
-    "qName": "$pol_group",
-    "qCardinal": 352,
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$key"
-    ],
-    "qSrcTables": [
-      "PolicesGrp",
-      "Link"
-    ]
-  },
-  {
-    "qName": "POL_NR",
-    "qCardinal": 105394,
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$key"
-    ],
-    "qSrcTables": [
-      "Result",
-      "Link"
-    ]
-  },
-  {
-    "qName": "POL_NR_List",
-    "qCardinal": 352,
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "PolicesGrp"
-    ]
-  },
-  {
-    "qName": "POL_NR_exists",
+    "qName": "__KEY_root",
     "qCardinal": 2,
     "qTags": [
+      "$key",
       "$numeric",
       "$integer"
     ],
     "qSrcTables": [
-      "Link"
+      "settings",
+      "testPolNr"
     ]
   },
   {
-    "qName": "log.appid",
+    "qName": "appid",
     "qCardinal": 1,
     "qTags": [
       "$ascii",
       "$text"
     ],
     "qSrcTables": [
-      "log"
+      "settings"
     ]
   },
   {
-    "qName": "log.duration",
-    "qCardinal": 52,
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
+    "qName": "config.json",
+    "qCardinal": 0,
+    "qTags": [],
     "qSrcTables": [
-      "log"
+      "TEST"
     ]
   },
   {
-    "qName": "log.loop",
-    "qCardinal": 352,
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "log"
-    ]
-  },
-  {
-    "qName": "log.msg",
-    "qCardinal": 11,
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "log"
-    ]
-  },
-  {
-    "qName": "log.records",
-    "qCardinal": 3259,
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "log"
-    ]
-  },
-  {
-    "qName": "log.scriptstart",
-    "qCardinal": 1,
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "log"
-    ]
-  },
-  {
-    "qName": "log.stepid",
-    "qCardinal": 11,
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "log"
-    ]
-  },
-  {
-    "qName": "log.t18_id_nr",
+    "qName": "t18_id_nr",
     "qCardinal": 1,
     "qTags": [
       "$numeric",
       "$integer"
     ],
     "qSrcTables": [
-      "log"
+      "settings"
     ]
   },
   {
-    "qName": "log.table",
-    "qCardinal": 7,
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "log"
-    ]
-  },
-  {
-    "qName": "log.time",
-    "qCardinal": 3247,
+    "qName": "testMode",
+    "qCardinal": 1,
     "qTags": [
       "$numeric",
-      "$timestamp"
+      "$integer"
     ],
     "qSrcTables": [
-      "log"
-    ]
-  },
-  {
-    "qName": "log.type",
-    "qCardinal": 2,
-    "qTags": [
-      "$ascii",
-      "$text"
-    ],
-    "qSrcTables": [
-      "log"
+      "settings"
     ]
   }
 ]

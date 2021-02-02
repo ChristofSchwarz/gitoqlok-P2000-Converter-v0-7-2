@@ -82,12 +82,20 @@
       "qType": "table"
     },
     {
+      "qId": "HcXrd",
+      "qType": "qsSimpleKPI"
+    },
+    {
       "qId": "HjEPQZ",
       "qType": "kpi"
     },
     {
       "qId": "LoadModel",
       "qType": "LoadModel"
+    },
+    {
+      "qId": "PSAJwdR",
+      "qType": "action-button"
     },
     {
       "qId": "RkJnhK",
@@ -115,6 +123,10 @@
       "modifiedDate": "2021-01-26T19:00:36.925Z"
     },
     {
+      "qId": "abJDAH",
+      "qType": "action-button"
+    },
+    {
       "qId": "aef62a7a-2ff9-4126-87d5-3268838a310e",
       "qType": "listbox"
     },
@@ -130,7 +142,7 @@
     {
       "qId": "c90d6d4e-9bd1-41b7-9faf-3bfb66cab3d0",
       "qType": "bookmark",
-      "modifiedDate": "2021-01-26T19:00:36.925Z"
+      "modifiedDate": "2021-01-29T12:13:29.687Z"
     },
     {
       "qId": "ca9da481-ec13-42e6-b281-35b06bd81663",
