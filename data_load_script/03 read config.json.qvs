@@ -8,6 +8,7 @@ SQL SELECT
     "t18_id_nr",
     "groupSize",
 	"testMode",
+    "qvdFolder",
 	"__KEY_root",
 	(SELECT 
 		"@Value",
@@ -18,7 +19,7 @@ FROM JSON (wrap on) "root" PK "__KEY_root";
 
 [config.json]:
 LOAD 
-	appid, t18_id_nr, testMode, groupSize, __KEY_root
+	appid, t18_id_nr, testMode, groupSize, qvdFolder, __KEY_root
 RESIDENT 
 	RestConnectorMasterTable
 WHERE 
@@ -33,7 +34,8 @@ https://deawa07394.zurich.com/dev-hub/extension-editor/#qext{p2000-settings}
   "t18_id_nr": 10679,
   "groupSize": 300,
   "testMode": true/false,
-  "testPolNr": [14093597,14094531,14096549,14097518]
+  "testPolNr": [14093597,14094531,14096549,14097518],
+  "qvdFolder": "lib://19.P2000/4.Export"
 }
 `;
 END IF
@@ -57,12 +59,14 @@ LET vGroupSize    = Peek('groupSize',-1,'config.json');  // How many Polices sho
 LET vT18_ID_NR    = Peek('t18_id_nr',-1,'config.json'); // 10679 "KTG" or 10998 "B77"
 LET vTestMode     = If(Peek('testMode',-1,'config.json') LIKE 'true', 1, 0);
 LET vTest_POL_NRs = Peek('polNrs',-1,'config.json');
+LET vExportFolder = Peek('qvdFolder',-1,'config.json');
 
 TRACE `Settings found in config.json:
  vGroupSize    : $(vGroupSize)
  vT18_ID_NR    : $(vT18_ID_NR)
  vTestMode     : $(vTestMode)
  vTest_POL_NRs : $(vTest_POL_NRs)
+ vExportFolder : $(vExportFolder)
 `;
 
 DROP TABLE config.json;

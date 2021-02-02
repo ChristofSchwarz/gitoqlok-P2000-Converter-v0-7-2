@@ -20,7 +20,6 @@ SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;
 
 // SET NULLINTERPRET='(null)';
 LET vTempFolder= 'lib://19.P2000/5.Import';
-LET vExportFolder= 'lib://19.P2000/4.Export';
 LET vStartScript = TimeStamp(Now(),'YYYY-MM-DD hh.mm.ss');
 
 SET vDBSchema = CHZIS1_P2000.P2000;
